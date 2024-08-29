@@ -3,6 +3,7 @@ import 'package:gap/gap.dart';
 import 'package:qhire_event/res/components/common/custom_button.dart';
 import 'package:qhire_event/res/components/common/custom_dropdown_field.dart';
 import 'package:qhire_event/res/components/common/custom_textformfield.dart';
+import 'package:qhire_event/view/home/home_view.dart';
 import 'package:qhire_event/view/register/widget/upload.dart';
 
 class RegisterView extends StatelessWidget {
@@ -104,7 +105,14 @@ class RegisterView extends StatelessWidget {
                         child: CustomButton(
                           backgroundColor: theme.colorScheme.primary,
                           foreground: theme.colorScheme.onPrimary,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (ctx) => const HomeView(),
+                              ),
+                            );
+                          },
                           btnText: "Register",
                         ),
                       ),
