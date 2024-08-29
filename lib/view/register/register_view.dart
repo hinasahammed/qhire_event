@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:qhire_event/res/components/common/custom_button.dart';
+import 'package:qhire_event/res/components/common/custom_dropdown_field.dart';
 import 'package:qhire_event/res/components/common/custom_textformfield.dart';
+import 'package:qhire_event/view/register/widget/upload.dart';
 
 class RegisterView extends StatelessWidget {
   const RegisterView({super.key});
@@ -28,105 +30,87 @@ class RegisterView extends StatelessWidget {
                     topRight: Radius.circular(35),
                   ),
                 ),
-                child: Column(
-                  children: [
-                    Text(
-                      "Register",
-                      style: theme.textTheme.titleLarge!.copyWith(
-                        color: theme.colorScheme.onSurface,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const Gap(5),
-                    Text(
-                      "Create your account",
-                      style: theme.textTheme.labelLarge!.copyWith(
-                        color: theme.colorScheme.onSurface,
-                      ),
-                    ),
-                    const Gap(20),
-                    CustomTextformfield(
-                      controller: TextEditingController(),
-                      label: "Full name",
-                    ),
-                    const Gap(10),
-                    CustomTextformfield(
-                      controller: TextEditingController(),
-                      label: "Mobile number",
-                    ),
-                    const Gap(10),
-                    CustomTextformfield(
-                      controller: TextEditingController(),
-                      label: "Email",
-                    ),
-                    const Gap(10),
-                    CustomTextformfield(
-                      controller: TextEditingController(),
-                      label: "Gender",
-                    ),
-                    const Gap(10),
-                    CustomTextformfield(
-                      controller: TextEditingController(),
-                      label: "Qualification",
-                    ),
-                    const Gap(10),
-                    CustomTextformfield(
-                      controller: TextEditingController(),
-                      label: "Experience",
-                    ),
-                    const Gap(10),
-                    CustomTextformfield(
-                      controller: TextEditingController(),
-                      label: "Linkedin Profile",
-                    ),
-                    const Gap(10),
-                    CustomTextformfield(
-                      controller: TextEditingController(),
-                      label: "District",
-                    ),
-                    const Gap(10),
-                    CustomTextformfield(
-                      controller: TextEditingController(),
-                      label: "Area of Expertise",
-                    ),
-                    const Gap(10),
-                    Row(
-                      children: [
-                        Text(
-                          "Upload photograph ",
-                          style: theme.textTheme.labelLarge!.copyWith(
-                            color: theme.colorScheme.onSurface,
-                            fontWeight: FontWeight.bold,
-                          ),
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      Text(
+                        "Register",
+                        style: theme.textTheme.titleLarge!.copyWith(
+                          color: theme.colorScheme.onSurface,
+                          fontWeight: FontWeight.bold,
                         ),
-                        Text(
-                          "(Max file size: 3Mb)",
-                          style: theme.textTheme.labelSmall!.copyWith(
-                            color: theme.colorScheme.onSurface,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: theme.colorScheme.onSurface.withOpacity(.50),
-                        ),
-                        borderRadius: BorderRadius.circular(15),
                       ),
-                      child: Row(
-                        children: [
-                          CustomButton(
-                            onPressed: () {},
-                            btnText: "Choose file",
-                          )
-                        ],
+                      const Gap(5),
+                      Text(
+                        "Create your account",
+                        style: theme.textTheme.labelLarge!.copyWith(
+                          color: theme.colorScheme.onSurface,
+                        ),
                       ),
-                    )
-                  ],
+                      const Gap(20),
+                      CustomTextformfield(
+                        isRequired: true,
+                        controller: TextEditingController(),
+                        label: "Full name",
+                      ),
+                      const Gap(10),
+                      CustomTextformfield(
+                        isRequired: true,
+                        controller: TextEditingController(),
+                        label: "Mobile number",
+                      ),
+                      const Gap(10),
+                      CustomTextformfield(
+                        isRequired: true,
+                        controller: TextEditingController(),
+                        label: "Email",
+                      ),
+                      const Gap(10),
+                      CustomTextformfield(
+                        isRequired: true,
+                        controller: TextEditingController(),
+                        label: "Gender",
+                      ),
+                      const Gap(10),
+                      const CustomDropdownField(
+                        hint: "Qualification",
+                      ),
+                      const Gap(10),
+                      const CustomDropdownField(
+                        hint: "Experience",
+                      ),
+                      const Gap(10),
+                      CustomTextformfield(
+                        isRequired: true,
+                        controller: TextEditingController(),
+                        label: "Linkedin Profile",
+                      ),
+                      const Gap(10),
+                      const CustomDropdownField(
+                        hint: "District",
+                      ),
+                      const Gap(10),
+                      const CustomDropdownField(
+                        hint: "Area of Expertise",
+                      ),
+                      const Gap(10),
+                      const Upload(fileName: "Photograph"),
+                      const Gap(10),
+                      const Upload(fileName: "Resume"),
+                      const Gap(20),
+                      SizedBox(
+                        width: double.infinity,
+                        height: 50,
+                        child: CustomButton(
+                          backgroundColor: theme.colorScheme.primary,
+                          foreground: theme.colorScheme.onPrimary,
+                          onPressed: () {},
+                          btnText: "Register",
+                        ),
+                      ),
+                      const Gap(10),
+                    ],
+                  ),
                 ),
               ),
             ),

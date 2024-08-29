@@ -24,7 +24,6 @@ class CustomOnboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final size = MediaQuery.sizeOf(context);
     return Consumer<OnboardViewmodel>(
       builder: (context, value, child) => Column(
         mainAxisAlignment: MainAxisAlignment.end,
@@ -34,7 +33,7 @@ class CustomOnboard extends StatelessWidget {
           const Spacer(),
           Container(
             width: double.infinity,
-            height: size.height * .33,
+            // height: size.height * .35,
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
               borderRadius: const BorderRadius.only(
