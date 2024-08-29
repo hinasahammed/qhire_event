@@ -12,7 +12,7 @@ class CustomTextformfield extends StatelessWidget {
     return TextFormField(
       controller: controller,
       decoration: InputDecoration(
-        border: const OutlineInputBorder(),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
         labelText: label,
         suffixIcon: suffix,
       ),
