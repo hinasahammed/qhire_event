@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:qhire_event/assets/images/image_asset.dart';
 import 'package:qhire_event/res/components/common/custom_button.dart';
+import 'package:qhire_event/view/login/login_view.dart';
 
 class OnboardFinal extends StatelessWidget {
   const OnboardFinal({super.key});
@@ -54,7 +55,14 @@ class OnboardFinal extends StatelessWidget {
                   width: double.infinity,
                   child: CustomButton(
                     foreground: theme.colorScheme.primary,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const LoginView(),
+                        ),
+                      );
+                    },
                     btnText: "I'm a Job Seeker",
                   ),
                 ),
