@@ -4,8 +4,8 @@ import 'package:qhire_event/assets/images/image_asset.dart';
 import 'package:qhire_event/res/components/common/custom_button.dart';
 import 'package:qhire_event/view/login/login_view.dart';
 
-class OnboardFinal extends StatelessWidget {
-  const OnboardFinal({super.key});
+class OnboardFinalWidget extends StatelessWidget {
+  const OnboardFinalWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

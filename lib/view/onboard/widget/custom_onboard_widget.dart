@@ -5,14 +5,14 @@ import 'package:qhire_event/res/components/common/custom_button.dart';
 import 'package:qhire_event/viewmodel/onboard/onboard_viewmodel.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class CustomOnboard extends StatelessWidget {
+class CustomOnboardWidget extends StatelessWidget {
   final PageController pageController;
   final String imageUrl;
   final String warmingText;
   final String desc;
   final void Function()? onPressed;
   final String btnText;
-  const CustomOnboard(
+  const CustomOnboardWidget(
       {super.key,
       required this.pageController,
       required this.imageUrl,
