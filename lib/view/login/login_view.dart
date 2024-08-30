@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:qhire_event/assets/icons/icon_asset.dart';
+import 'package:qhire_event/assets/images/image_asset.dart';
 import 'package:qhire_event/res/components/common/custom_button.dart';
 import 'package:qhire_event/res/components/common/custom_textformfield.dart';
 import 'package:qhire_event/view/register/register_view.dart';
@@ -19,13 +20,7 @@ class LoginView extends StatelessWidget {
               width: double.infinity,
               height: 300,
               alignment: Alignment.center,
-              child: Text(
-                "Logo",
-                style: theme.textTheme.headlineLarge!.copyWith(
-                  color: theme.colorScheme.primary,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              child: Image.asset(ImageAsset.logo),
             ),
             Expanded(
               child: Container(
