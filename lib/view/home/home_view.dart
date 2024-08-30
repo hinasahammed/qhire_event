@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:qhire_event/view/home/widget/home_top_container.dart';
+import 'package:qhire_event/view/home/widget/featured_jobs_widget.dart';
+import 'package:qhire_event/view/home/widget/home_tab_items_widget.dart';
+import 'package:qhire_event/view/home/widget/home_top_container_widget.dart';
+import 'package:qhire_event/view/home/widget/recomended_widget.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -8,6 +11,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final size = MediaQuery.sizeOf(context);
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -19,7 +23,7 @@ class HomeView extends StatelessWidget {
         ),
         actions: [
           Icon(
-            Icons.bookmark,
+            Icons.bookmark_outline,
             color: theme.colorScheme.primary,
           ),
           Icon(
@@ -29,10 +33,19 @@ class HomeView extends StatelessWidget {
           const Gap(10)
         ],
       ),
-      body: const Column(
-        children: [
-          HomeTopContainer(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const HomeTopContainer(),
+            SizedBox(
+              height: size.height * .09,
+              child: const HomeTabItemsWidget(),
+            ),
+            const RecomendedWidget(),
+            const FeaturedJobsWidget(),
+          ],
+        ),
       ),
     );
   }

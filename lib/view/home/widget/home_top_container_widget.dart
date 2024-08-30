@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:qhire_event/res/components/common/custom_textformfield.dart';
+import 'package:qhire_event/view/home/widget/recent_items_widget.dart';
 
 class HomeTopContainer extends StatelessWidget {
   const HomeTopContainer({super.key});
@@ -16,9 +17,10 @@ class HomeTopContainer extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
               border: Border(
-                  bottom: BorderSide(
-                color: theme.colorScheme.onSurface.withOpacity(.1),
-              )),
+                bottom: BorderSide(
+                  color: theme.colorScheme.onSurface.withOpacity(.1),
+                ),
+              ),
               borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(20),
                 bottomRight: Radius.circular(20),
@@ -78,25 +80,7 @@ class HomeTopContainer extends StatelessWidget {
               const Gap(15),
               SizedBox(
                 height: size.height * .04,
-                child: ListView.separated(
-                  itemCount: 3,
-                  scrollDirection: Axis.horizontal,
-                  separatorBuilder: (context, index) => const Gap(10),
-                  itemBuilder: (context, index) => Container(
-                    alignment: Alignment.center,
-                    padding: const EdgeInsets.all(6),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: theme.colorScheme.onSurface.withOpacity(.1),
-                    ),
-                    child: Text(
-                      "UI/UX Designer",
-                      style: theme.textTheme.labelLarge!.copyWith(
-                        color: theme.colorScheme.onSurface,
-                      ),
-                    ),
-                  ),
-                ),
+                child: const RecentItemsWidget(),
               )
             ],
           ),
