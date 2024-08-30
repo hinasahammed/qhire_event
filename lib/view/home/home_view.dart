@@ -4,6 +4,7 @@ import 'package:qhire_event/view/home/widget/featured_jobs_widget.dart';
 import 'package:qhire_event/view/home/widget/home_tab_items_widget.dart';
 import 'package:qhire_event/view/home/widget/home_top_container_widget.dart';
 import 'package:qhire_event/view/home/widget/recomended_widget.dart';
+import 'package:qhire_event/view/savedJobs/saved_jobs.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -22,9 +23,19 @@ class HomeView extends StatelessWidget {
           ),
         ),
         actions: [
-          Icon(
-            Icons.bookmark_outline,
-            color: theme.colorScheme.primary,
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const SavedJobs(),
+                ),
+              );
+            },
+            icon: Icon(
+              Icons.bookmark_outline,
+              color: theme.colorScheme.primary,
+            ),
           ),
           Icon(
             Icons.notifications_active_rounded,

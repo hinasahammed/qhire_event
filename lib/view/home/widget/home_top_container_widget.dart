@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:qhire_event/res/components/common/custom_textformfield.dart';
 import 'package:qhire_event/view/home/widget/recent_items_widget.dart';
+import 'package:qhire_event/viewmodel/services/home/home_services.dart';
 
 class HomeTopContainer extends StatelessWidget {
   const HomeTopContainer({super.key});
@@ -46,18 +47,23 @@ class HomeTopContainer extends StatelessWidget {
                     ),
                   ),
                   const Gap(20),
-                  Container(
-                    height: 50,
-                    padding: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: theme.colorScheme.onSurface.withOpacity(.5),
+                  InkWell(
+                    onTap: () {
+                      HomeServices().showFilter(context);
+                    },
+                    child: Container(
+                      height: 50,
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: theme.colorScheme.onSurface.withOpacity(.5),
+                        ),
+                        borderRadius: BorderRadius.circular(10),
                       ),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Icon(
-                      Icons.tune,
-                      color: theme.colorScheme.primary,
+                      child: Icon(
+                        Icons.tune,
+                        color: theme.colorScheme.primary,
+                      ),
                     ),
                   ),
                 ],
