@@ -8,6 +8,7 @@ class HomeTopContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final size = MediaQuery.sizeOf(context);
     return Column(
       children: [
         Container(
@@ -27,20 +28,24 @@ class HomeTopContainer extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
-                    child: CustomTextformfield(
-                      prefix: Icon(
-                        Icons.search,
-                        color: theme.colorScheme.primary,
+                    child: SizedBox(
+                      height: 50,
+                      child: CustomTextformfield(
+                        prefix: Icon(
+                          Icons.search,
+                          color: theme.colorScheme.primary,
+                        ),
+                        suffix: Icon(
+                          Icons.mic,
+                          color: theme.colorScheme.primary,
+                        ),
+                        label: "Job title, keyword or company",
                       ),
-                      suffix: Icon(
-                        Icons.mic,
-                        color: theme.colorScheme.primary,
-                      ),
-                      label: "Job title,keyword or company",
                     ),
                   ),
-                  const Gap(15),
+                  const Gap(20),
                   Container(
+                    height: 50,
                     padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       border: Border.all(
@@ -55,7 +60,7 @@ class HomeTopContainer extends StatelessWidget {
                   ),
                 ],
               ),
-              const Gap(10),
+              const Gap(15),
               Row(
                 children: [
                   Icon(
@@ -70,24 +75,28 @@ class HomeTopContainer extends StatelessWidget {
                   )
                 ],
               ),
-              const Gap(10),
-              Row(
-                children: [
-                  for (int i = 0; i <= 1; i++)
-                    Container(
-                      padding: const EdgeInsets.all(6),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: theme.colorScheme.onSurface.withOpacity(.1),
+              const Gap(15),
+              SizedBox(
+                height: size.height * .04,
+                child: ListView.separated(
+                  itemCount: 3,
+                  scrollDirection: Axis.horizontal,
+                  separatorBuilder: (context, index) => const Gap(10),
+                  itemBuilder: (context, index) => Container(
+                    alignment: Alignment.center,
+                    padding: const EdgeInsets.all(6),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: theme.colorScheme.onSurface.withOpacity(.1),
+                    ),
+                    child: Text(
+                      "UI/UX Designer",
+                      style: theme.textTheme.labelLarge!.copyWith(
+                        color: theme.colorScheme.onSurface,
                       ),
-                      child: Text(
-                        "UI/UX Designer",
-                        style: theme.textTheme.labelSmall!.copyWith(
-                          color: theme.colorScheme.onSurface,
-                        ),
-                      ),
-                    )
-                ],
+                    ),
+                  ),
+                ),
               )
             ],
           ),

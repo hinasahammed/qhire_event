@@ -42,8 +42,9 @@ class CustomTextformfield extends StatelessWidget {
               )
             : Text(
                 label,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
+                style: theme.textTheme.labelLarge!.copyWith(
+                  color: theme.colorScheme.onSurface,
+                ),
               ),
         suffixIcon: suffix,
       ),
