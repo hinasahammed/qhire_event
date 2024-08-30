@@ -13,4 +13,7 @@ class IconAsset {
   static const String profileOutline = "assets/icons/profile_outline.png";
   static const String profileColoured = "assets/icons/profile_coloured.png";
   static const String arrowDown = "assets/icons/arrow_down.png";
+  static const String microsoftIcon = "assets/icons/microsoft.png";
+  static const String twitterIcon = "assets/icons/twitter.png";
+  static const String facebookIcon = "assets/icons/facebook.png";
 }

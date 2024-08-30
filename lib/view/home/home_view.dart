@@ -50,7 +50,7 @@ class HomeView extends StatelessWidget {
           children: [
             const HomeTopContainer(),
             SizedBox(
-              height: size.height * .09,
+              height: size.height * .11,
               child: const HomeTabItemsWidget(),
             ),
             const RecomendedWidget(),

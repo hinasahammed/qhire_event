@@ -24,7 +24,7 @@ class RecomendedWidget extends StatelessWidget {
           ),
           const Gap(20),
           SizedBox(
-            height: size.height * .31,
+            height: size.height * .4,
             child: ListView.separated(
               itemCount: 3,
               shrinkWrap: true,
