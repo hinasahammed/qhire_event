@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:qhire_event/view/onboard/onboard_view.dart';
+import 'package:qhire_event/viewmodel/home/home_viewmodel.dart';
 import 'package:qhire_event/viewmodel/onboard/onboard_viewmodel.dart';
 import 'package:qhire_event/viewmodel/tabbar/tabbar_viewmodel.dart';
 
@@ -21,6 +22,9 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (context) => TabbarViewmodel(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => HomeViewmodel(),
         ),
       ],
       child: MaterialApp(
