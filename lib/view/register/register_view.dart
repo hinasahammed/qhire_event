@@ -3,8 +3,8 @@ import 'package:gap/gap.dart';
 import 'package:qhire_event/res/components/common/custom_button.dart';
 import 'package:qhire_event/res/components/common/custom_dropdown_field.dart';
 import 'package:qhire_event/res/components/common/custom_textformfield.dart';
-import 'package:qhire_event/view/home/home_view.dart';
-import 'package:qhire_event/view/register/widget/upload.dart';
+import 'package:qhire_event/view/register/widget/upload_widget.dart';
+import 'package:qhire_event/view/tabbar/custom_tab_bar.dart';
 
 class RegisterView extends StatelessWidget {
   const RegisterView({super.key});
@@ -99,9 +99,9 @@ class RegisterView extends StatelessWidget {
                         hint: "Area of Expertise",
                       ),
                       const Gap(10),
-                      const Upload(fileName: "Photograph"),
+                      const UploadWidget(fileName: "Photograph"),
                       const Gap(10),
-                      const Upload(fileName: "Resume"),
+                      const UploadWidget(fileName: "Resume"),
                       const Gap(20),
                       SizedBox(
                         width: double.infinity,
@@ -113,7 +113,7 @@ class RegisterView extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (ctx) => const HomeView(),
+                                builder: (ctx) => const CustomTabBar(),
                               ),
                             );
                           },
