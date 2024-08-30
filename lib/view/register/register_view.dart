@@ -74,10 +74,12 @@ class RegisterView extends StatelessWidget {
                       ),
                       const Gap(10),
                       const CustomDropdownField(
+                        isRequired: true,
                         hint: "Qualification",
                       ),
                       const Gap(10),
                       const CustomDropdownField(
+                        isRequired: true,
                         hint: "Experience",
                       ),
                       const Gap(10),
@@ -88,10 +90,12 @@ class RegisterView extends StatelessWidget {
                       ),
                       const Gap(10),
                       const CustomDropdownField(
+                        isRequired: true,
                         hint: "District",
                       ),
                       const Gap(10),
                       const CustomDropdownField(
+                        isRequired: true,
                         hint: "Area of Expertise",
                       ),
                       const Gap(10),

@@ -20,13 +20,23 @@ class Upload extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Text(
-              "(Max file size: 3Mb)",
-              style: theme.textTheme.labelSmall!.copyWith(
-                color: theme.colorScheme.onSurface,
-                fontWeight: FontWeight.w600,
+            RichText(
+              text: TextSpan(
+                text: "*",
+                style: theme.textTheme.bodyLarge!.copyWith(
+                  color: theme.colorScheme.error,
+                ),
+                children: [
+                  TextSpan(
+                    text: "(Max file size: 3Mb)",
+                    style: theme.textTheme.labelSmall!.copyWith(
+                      color: theme.colorScheme.onSurface,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
               ),
-            ),
+            )
           ],
         ),
         const Gap(10),
@@ -42,9 +52,12 @@ class Upload extends StatelessWidget {
           child: Row(
             children: [
               CustomButton(
+                backgroundColor: theme.colorScheme.onSurface.withOpacity(.4),
+                foreground: theme.colorScheme.surface,
                 onPressed: () {},
                 btnText: "Choose file",
               ),
+              const Gap(10),
               Text(
                 "No file chosen",
                 style: theme.textTheme.bodyLarge!.copyWith(

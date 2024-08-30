@@ -4,6 +4,7 @@ class CustomTextformfield extends StatelessWidget {
   final TextEditingController? controller;
   final String label;
   final Widget? suffix;
+  final Widget? prefix;
   final bool isRequired;
   const CustomTextformfield({
     super.key,
@@ -11,6 +12,7 @@ class CustomTextformfield extends StatelessWidget {
     required this.label,
     this.suffix,
     this.isRequired = false,
+    this.prefix,
   });
 
   @override
@@ -20,6 +22,7 @@ class CustomTextformfield extends StatelessWidget {
       controller: controller,
       decoration: InputDecoration(
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
+        prefixIcon: prefix,
         label: isRequired
             ? RichText(
                 text: TextSpan(
@@ -37,7 +40,11 @@ class CustomTextformfield extends StatelessWidget {
                   ],
                 ),
               )
-            : Text(label),
+            : Text(
+                label,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
         suffixIcon: suffix,
       ),
     );
