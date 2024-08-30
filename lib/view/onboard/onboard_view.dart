@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:qhire_event/assets/images/image_asset.dart';
-import 'package:qhire_event/view/onboard/widget/custom_onboard.dart';
-import 'package:qhire_event/view/onboard/widget/onboard_final.dart';
+import 'package:qhire_event/view/onboard/widget/custom_onboard_widget.dart';
+import 'package:qhire_event/view/onboard/widget/onboard_final_widget.dart';
 import 'package:qhire_event/viewmodel/onboard/onboard_viewmodel.dart';
 
 class OnboardView extends StatefulWidget {
@@ -26,7 +26,7 @@ class _OnboardViewState extends State<OnboardView> {
           },
           controller: pageController,
           children: [
-            CustomOnboard(
+            CustomOnboardWidget(
               pageController: pageController,
               onPressed: () {
                 pageController.nextPage(
@@ -39,7 +39,7 @@ class _OnboardViewState extends State<OnboardView> {
               desc: "Welcome to CareerHub! Look for your dream job, with us.",
               btnText: "Next",
             ),
-            CustomOnboard(
+            CustomOnboardWidget(
               pageController: pageController,
               onPressed: () {
                 pageController.nextPage(
@@ -52,13 +52,13 @@ class _OnboardViewState extends State<OnboardView> {
               desc: "Find a suitable job without even leaving home.",
               btnText: "Next",
             ),
-            CustomOnboard(
+            CustomOnboardWidget(
               pageController: pageController,
               onPressed: () {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const OnboardFinal(),
+                    builder: (context) => const OnboardFinalWidget(),
                   ),
                 );
               },
