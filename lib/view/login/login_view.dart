@@ -20,6 +20,11 @@ class LoginView extends StatelessWidget {
               width: double.infinity,
               height: 300,
               alignment: Alignment.center,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(ImageAsset.background),
+                ),
+              ),
               child: Image.asset(ImageAsset.logo),
             ),
             Expanded(

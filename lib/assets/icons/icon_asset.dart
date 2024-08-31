@@ -16,4 +16,11 @@ class IconAsset {
   static const String microsoftIcon = "assets/icons/microsoft.png";
   static const String twitterIcon = "assets/icons/twitter.png";
   static const String facebookIcon = "assets/icons/facebook.png";
+  static const String profileIcon = "assets/icons/profile_icon.png";
+  static const String qualificationIcon = "assets/icons/qualification_icon.png";
+  static const String certificationIcon = "assets/icons/certification_icon.png";
+  static const String skillsIcon = "assets/icons/skills_icon.png";
+  static const String resumeIcon = "assets/icons/resume_icon.png";
+  static const String appliedJobIcon = "assets/icons/applied_jobs_icon.png";
+  static const String settingsIcon = "assets/icons/settings_icon.png";
 }

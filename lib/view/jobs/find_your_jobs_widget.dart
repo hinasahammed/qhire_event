@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:qhire_event/res/components/home/saved_job_list.dart';
+import 'package:qhire_event/res/components/jobs/all_job_list.dart';
 import 'package:qhire_event/res/components/jobs/job_card.dart';
 
 class FindYourJobsWidget extends StatelessWidget {
@@ -21,11 +21,11 @@ class FindYourJobsWidget extends StatelessWidget {
         ),
         const Gap(20),
         ListView.separated(
-          itemCount: savedJobList.length,
+          itemCount: allJobList.length,
           shrinkWrap: true,
           separatorBuilder: (context, index) => const Gap(10),
           itemBuilder: (context, index) {
-            final data = savedJobList[index];
+            final data = allJobList[index];
             return JobCard(
               imageUrl: data.imageUrl,
               companyName: data.companyName,

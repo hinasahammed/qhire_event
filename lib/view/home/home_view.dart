@@ -12,7 +12,6 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final size = MediaQuery.sizeOf(context);
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -44,17 +43,17 @@ class HomeView extends StatelessWidget {
           const Gap(10)
         ],
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const HomeTopContainer(),
+            HomeTopContainer(),
             SizedBox(
-              height: size.height * .11,
-              child: const HomeTabItemsWidget(),
+              height: 80,
+              child: HomeTabItemsWidget(),
             ),
-            const RecomendedWidget(),
-            const FeaturedJobsWidget(),
+            RecomendedWidget(),
+            FeaturedJobsWidget(),
           ],
         ),
       ),

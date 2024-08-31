@@ -1,9 +1,9 @@
-class SavedJobModel {
+class JobModel {
   final String imageUrl;
   final String companyName;
   final String jobName;
 
-  SavedJobModel({
+  JobModel({
     required this.imageUrl,
     required this.companyName,
     required this.jobName,

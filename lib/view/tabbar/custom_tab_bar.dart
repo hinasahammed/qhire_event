@@ -4,6 +4,7 @@ import 'package:qhire_event/assets/icons/icon_asset.dart';
 import 'package:qhire_event/view/event/event_view.dart';
 import 'package:qhire_event/view/home/home_view.dart';
 import 'package:qhire_event/view/jobs/jobs_view.dart';
+import 'package:qhire_event/view/profile/profile_view.dart';
 import 'package:qhire_event/viewmodel/controller/tabbar/tabbar_viewmodel.dart';
 
 class CustomTabBar extends StatelessWidget {
@@ -17,15 +18,13 @@ class CustomTabBar extends StatelessWidget {
       animationDuration: const Duration(milliseconds: 400),
       length: 4,
       child: Scaffold(
-        body: TabBarView(
-          physics: const NeverScrollableScrollPhysics(),
+        body: const TabBarView(
+          physics: NeverScrollableScrollPhysics(),
           children: [
-            const HomeView(),
-            const EventView(),
-            const JobsView(),
-            Container(
-              color: Colors.purple,
-            )
+            HomeView(),
+            EventView(),
+            JobsView(),
+            ProfileView(),
           ],
         ),
         bottomNavigationBar: Consumer<TabbarViewmodel>(

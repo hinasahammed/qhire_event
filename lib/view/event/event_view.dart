@@ -43,7 +43,7 @@ class EventView extends StatelessWidget {
                       ),
                       child: Text(
                         "Upcoming",
-                        style: theme.textTheme.bodyLarge!.copyWith(
+                        style: theme.textTheme.labelLarge!.copyWith(
                           color: value.currentTabIndex == 0
                               ? theme.colorScheme.onPrimary
                               : theme.colorScheme.onSurface,
@@ -65,7 +65,7 @@ class EventView extends StatelessWidget {
                       ),
                       child: Text(
                         "Cancelled",
-                        style: theme.textTheme.bodyLarge!.copyWith(
+                        style: theme.textTheme.labelLarge!.copyWith(
                           color: value.currentTabIndex == 1
                               ? theme.colorScheme.onPrimary
                               : theme.colorScheme.onSurface,
