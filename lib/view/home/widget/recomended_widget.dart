@@ -24,7 +24,7 @@ class RecomendedWidget extends StatelessWidget {
           ),
           const Gap(20),
           SizedBox(
-            height: size.height * .4,
+            height: 300,
             child: ListView.separated(
               itemCount: 3,
               shrinkWrap: true,
@@ -51,7 +51,7 @@ class RecomendedWidget extends StatelessWidget {
                             shape: BoxShape.circle,
                             image: DecorationImage(
                               image: AssetImage(ImageAsset.logo),
-                              fit: BoxFit.contain,
+                              fit: BoxFit.fitWidth,
                             ),
                           ),
                         ),
@@ -90,8 +90,10 @@ class RecomendedWidget extends StatelessWidget {
                       ),
                     ),
                     const Gap(10),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    Wrap(
+                      alignment: WrapAlignment.spaceBetween,
+                      crossAxisAlignment: WrapCrossAlignment.center,
+                      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           "Full Time",
@@ -99,22 +101,26 @@ class RecomendedWidget extends StatelessWidget {
                             color: theme.colorScheme.onSurface.withOpacity(.7),
                           ),
                         ),
+                        const Gap(5),
                         Icon(
                           Icons.circle,
                           size: 10,
                           color: theme.colorScheme.onSurface.withOpacity(.7),
                         ),
+                        const Gap(5),
                         Text(
                           "Exp 3 Years",
                           style: theme.textTheme.bodyLarge!.copyWith(
                             color: theme.colorScheme.onSurface.withOpacity(.7),
                           ),
                         ),
+                        const Gap(5),
                         Icon(
                           Icons.circle,
                           size: 10,
                           color: theme.colorScheme.onSurface.withOpacity(.7),
                         ),
+                        const Gap(5),
                         Text(
                           "Remote",
                           style: theme.textTheme.bodyLarge!.copyWith(
