@@ -45,58 +45,60 @@ class ProfileView extends StatelessWidget {
                     topRight: Radius.circular(50),
                   ),
                 ),
-                child: Column(
-                  children: [
-                    const Gap(50),
-                    Text(
-                      "Catherin",
-                      style: theme.textTheme.headlineLarge!.copyWith(
-                        color: theme.colorScheme.onSurface,
-                        fontWeight: FontWeight.bold,
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      const Gap(50),
+                      Text(
+                        "Catherin",
+                        style: theme.textTheme.headlineLarge!.copyWith(
+                          color: theme.colorScheme.onSurface,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    Text(
-                      "UI/UX Designer",
-                      style: theme.textTheme.labelLarge!.copyWith(
-                        color: theme.colorScheme.onSurface,
+                      Text(
+                        "UI/UX Designer",
+                        style: theme.textTheme.labelLarge!.copyWith(
+                          color: theme.colorScheme.onSurface,
+                        ),
                       ),
-                    ),
-                    Text(
-                      "catherin007@gmail.com",
-                      style: theme.textTheme.labelLarge!.copyWith(
-                        color: theme.colorScheme.onSurface,
+                      Text(
+                        "catherin007@gmail.com",
+                        style: theme.textTheme.labelLarge!.copyWith(
+                          color: theme.colorScheme.onSurface,
+                        ),
                       ),
-                    ),
-                    const Gap(30),
-                    const ProfileCardItemWidget(
-                      icon: IconAsset.profileIcon,
-                      title: "Profile",
-                    ),
-                    const ProfileCardItemWidget(
-                      icon: IconAsset.qualificationIcon,
-                      title: "Qualification",
-                    ),
-                    const ProfileCardItemWidget(
-                      icon: IconAsset.certificationIcon,
-                      title: "Certifications",
-                    ),
-                    const ProfileCardItemWidget(
-                      icon: IconAsset.skillsIcon,
-                      title: "Skills",
-                    ),
-                    const ProfileCardItemWidget(
-                      icon: IconAsset.resumeIcon,
-                      title: "Resume",
-                    ),
-                    const ProfileCardItemWidget(
-                      icon: IconAsset.appliedJobIcon,
-                      title: "View Applied Jobs",
-                    ),
-                    const ProfileCardItemWidget(
-                      icon: IconAsset.settingsIcon,
-                      title: "Settings",
-                    ),
-                  ],
+                      const Gap(30),
+                      const ProfileCardItemWidget(
+                        icon: IconAsset.profileIcon,
+                        title: "Profile",
+                      ),
+                      const ProfileCardItemWidget(
+                        icon: IconAsset.qualificationIcon,
+                        title: "Qualification",
+                      ),
+                      const ProfileCardItemWidget(
+                        icon: IconAsset.certificationIcon,
+                        title: "Certifications",
+                      ),
+                      const ProfileCardItemWidget(
+                        icon: IconAsset.skillsIcon,
+                        title: "Skills",
+                      ),
+                      const ProfileCardItemWidget(
+                        icon: IconAsset.resumeIcon,
+                        title: "Resume",
+                      ),
+                      const ProfileCardItemWidget(
+                        icon: IconAsset.appliedJobIcon,
+                        title: "View Applied Jobs",
+                      ),
+                      const ProfileCardItemWidget(
+                        icon: IconAsset.settingsIcon,
+                        title: "Settings",
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
