@@ -6,7 +6,7 @@ import 'package:qhire_event/res/components/home/field_filter_list.dart';
 import 'package:qhire_event/res/components/home/salary_filter_list.dart';
 import 'package:qhire_event/res/components/home/type_filter_list.dart';
 import 'package:qhire_event/view/home/widget/field_filter_widget.dart';
-import 'package:qhire_event/viewmodel/home/home_viewmodel.dart';
+import 'package:qhire_event/viewmodel/controller/home/home_viewmodel.dart';
 
 class FilterSheetWidget extends StatelessWidget {
   const FilterSheetWidget({super.key});

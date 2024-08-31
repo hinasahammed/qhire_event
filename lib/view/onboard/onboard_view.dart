@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:qhire_event/assets/images/image_asset.dart';
 import 'package:qhire_event/view/onboard/widget/custom_onboard_widget.dart';
 import 'package:qhire_event/view/onboard/widget/onboard_final_widget.dart';
-import 'package:qhire_event/viewmodel/onboard/onboard_viewmodel.dart';
+import 'package:qhire_event/viewmodel/controller/onboard/onboard_viewmodel.dart';
 
 class OnboardView extends StatefulWidget {
   const OnboardView({super.key});

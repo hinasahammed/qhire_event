@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:qhire_event/assets/icons/icon_asset.dart';
+import 'package:qhire_event/view/event/event_view.dart';
 import 'package:qhire_event/view/home/home_view.dart';
-import 'package:qhire_event/viewmodel/tabbar/tabbar_viewmodel.dart';
+import 'package:qhire_event/viewmodel/controller/tabbar/tabbar_viewmodel.dart';
 
 class CustomTabBar extends StatelessWidget {
   const CustomTabBar({super.key});
@@ -19,9 +20,7 @@ class CustomTabBar extends StatelessWidget {
           physics: const NeverScrollableScrollPhysics(),
           children: [
             const HomeView(),
-            Container(
-              color: Colors.amber,
-            ),
+            const EventView(),
             Container(
               color: Colors.red,
             ),
