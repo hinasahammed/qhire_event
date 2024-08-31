@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:qhire_event/res/components/common/custom_textformfield.dart';
-import 'package:qhire_event/res/components/home/saved_job_list.dart';
-import 'package:qhire_event/res/components/jobs/job_card.dart';
+import 'package:qhire_event/view/jobs/find_your_jobs_widget.dart';
 
-class SavedJobs extends StatelessWidget {
-  const SavedJobs({super.key});
+class JobsView extends StatelessWidget {
+  const JobsView({super.key});
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Saved Jobs"),
+        title: const Text("Jobs"),
+        automaticallyImplyLeading: false,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
               height: 50,
@@ -33,20 +34,18 @@ class SavedJobs extends StatelessWidget {
               ),
             ),
             const Gap(20),
-            Expanded(
-              child: ListView.separated(
-                itemCount: savedJobList.length,
-                separatorBuilder: (context, index) => const Gap(10),
-                itemBuilder: (context, index) {
-                  final data = savedJobList[index];
-                  return JobCard(
-                    imageUrl: data.imageUrl,
-                    companyName: data.companyName,
-                    jobName: data.jobName,
-                  );
-                },
+            SizedBox(
+              height: 50,
+              child: CustomTextformfield(
+                prefix: Icon(
+                  Icons.location_on,
+                  color: theme.colorScheme.primary,
+                ),
+                label: "Bangalore, Karnataka",
               ),
-            )
+            ),
+            const Gap(20),
+            const FindYourJobsWidget()
           ],
         ),
       ),

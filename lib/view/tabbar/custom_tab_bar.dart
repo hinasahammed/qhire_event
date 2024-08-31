@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:qhire_event/assets/icons/icon_asset.dart';
 import 'package:qhire_event/view/event/event_view.dart';
 import 'package:qhire_event/view/home/home_view.dart';
+import 'package:qhire_event/view/jobs/jobs_view.dart';
 import 'package:qhire_event/viewmodel/controller/tabbar/tabbar_viewmodel.dart';
 
 class CustomTabBar extends StatelessWidget {
@@ -21,9 +22,7 @@ class CustomTabBar extends StatelessWidget {
           children: [
             const HomeView(),
             const EventView(),
-            Container(
-              color: Colors.red,
-            ),
+            const JobsView(),
             Container(
               color: Colors.purple,
             )

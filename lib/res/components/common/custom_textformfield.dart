@@ -21,7 +21,9 @@ class CustomTextformfield extends StatelessWidget {
     return TextFormField(
       controller: controller,
       decoration: InputDecoration(
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15),
+        ),
         prefixIcon: prefix,
         label: isRequired
             ? RichText(
