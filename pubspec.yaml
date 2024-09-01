@@ -39,6 +39,7 @@ dependencies:
   smooth_page_indicator: ^1.2.0+3
   gap: ^3.0.1
   provider: ^6.1.2
+  dotted_border: ^2.1.0
 
 dev_dependencies:
   flutter_test:

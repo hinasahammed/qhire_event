@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:qhire_event/assets/icons/icon_asset.dart';
 import 'package:qhire_event/assets/images/image_asset.dart';
+import 'package:qhire_event/view/certification/certification_view.dart';
+import 'package:qhire_event/view/editProfile/edit_profile_view.dart';
 import 'package:qhire_event/view/profile/widget/profile_card_item_widget.dart';
+import 'package:qhire_event/view/qualification/qualification_view.dart';
+import 'package:qhire_event/view/skills/skills_view.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
@@ -69,19 +73,51 @@ class ProfileView extends StatelessWidget {
                         ),
                       ),
                       const Gap(30),
-                      const ProfileCardItemWidget(
+                      ProfileCardItemWidget(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const EditProfileView(),
+                            ),
+                          );
+                        },
                         icon: IconAsset.profileIcon,
                         title: "Profile",
                       ),
-                      const ProfileCardItemWidget(
+                      ProfileCardItemWidget(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const QualificationView(),
+                            ),
+                          );
+                        },
                         icon: IconAsset.qualificationIcon,
                         title: "Qualification",
                       ),
-                      const ProfileCardItemWidget(
+                      ProfileCardItemWidget(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const CertificationView(),
+                            ),
+                          );
+                        },
                         icon: IconAsset.certificationIcon,
                         title: "Certifications",
                       ),
-                      const ProfileCardItemWidget(
+                      ProfileCardItemWidget(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const SkillsView(),
+                            ),
+                          );
+                        },
                         icon: IconAsset.skillsIcon,
                         title: "Skills",
                       ),
