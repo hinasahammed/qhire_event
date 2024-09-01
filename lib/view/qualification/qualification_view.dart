@@ -41,7 +41,7 @@ class QualificationView extends StatelessWidget {
                         children: [
                           Text(
                             data.courseName,
-                            style: theme.textTheme.titleLarge!.copyWith(
+                            style: theme.textTheme.bodyLarge!.copyWith(
                               color: theme.colorScheme.onSurface,
                               fontWeight: FontWeight.bold,
                             ),
@@ -49,14 +49,14 @@ class QualificationView extends StatelessWidget {
                           const Gap(5),
                           Text(
                             data.institutionName,
-                            style: theme.textTheme.bodyLarge!.copyWith(
+                            style: theme.textTheme.labelLarge!.copyWith(
                               color: theme.colorScheme.onSurface,
                             ),
                           ),
                           const Gap(5),
                           Text(
                             data.year,
-                            style: theme.textTheme.bodyLarge!.copyWith(
+                            style: theme.textTheme.labelLarge!.copyWith(
                               color: theme.colorScheme.onSurface,
                             ),
                           )

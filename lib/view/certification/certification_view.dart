@@ -43,7 +43,7 @@ class CertificationView extends StatelessWidget {
                       Expanded(
                           child: Text(
                         data.courseNAme,
-                        style: theme.textTheme.titleLarge!.copyWith(
+                        style: theme.textTheme.bodyLarge!.copyWith(
                           color: theme.colorScheme.onSurface,
                           fontWeight: FontWeight.bold,
                         ),

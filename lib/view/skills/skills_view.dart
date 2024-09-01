@@ -60,7 +60,7 @@ class SkillsView extends StatelessWidget {
                     const Gap(10),
                     Text(
                       "UI/UX Design",
-                      style: theme.textTheme.bodyLarge!.copyWith(
+                      style: theme.textTheme.labelLarge!.copyWith(
                         color: theme.colorScheme.surface,
                       ),
                     )

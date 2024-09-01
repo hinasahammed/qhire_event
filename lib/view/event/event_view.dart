@@ -12,15 +12,15 @@ class EventView extends StatelessWidget {
   Widget build(BuildContext context) {
     final eventProvider = Provider.of<EventViewmodel>(context, listen: false);
     final theme = Theme.of(context);
-    return DefaultTabController(
+    return Consumer<EventViewmodel>(builder: (context, value, child) => DefaultTabController(
       length: 2,
+      initialIndex: value.currentTabIndex,
       child: Scaffold(
         appBar: AppBar(
           title: const Text("Event"),
           automaticallyImplyLeading: false,
         ),
-        body: Consumer<EventViewmodel>(
-          builder: (context, value, child) => Column(
+        body: Column(
             children: [
               TabBar(
                 onTap: (value) {
@@ -90,8 +90,7 @@ class EventView extends StatelessWidget {
               )
             ],
           ),
-        ),
       ),
-    );
+    ),);
   }
 }
