@@ -6,6 +6,7 @@ import 'package:qhire_event/view/certification/certification_view.dart';
 import 'package:qhire_event/view/editProfile/edit_profile_view.dart';
 import 'package:qhire_event/view/profile/widget/profile_card_item_widget.dart';
 import 'package:qhire_event/view/qualification/qualification_view.dart';
+import 'package:qhire_event/view/resume/resume_view.dart';
 import 'package:qhire_event/view/skills/skills_view.dart';
 
 class ProfileView extends StatelessWidget {
@@ -121,7 +122,15 @@ class ProfileView extends StatelessWidget {
                         icon: IconAsset.skillsIcon,
                         title: "Skills",
                       ),
-                      const ProfileCardItemWidget(
+                      ProfileCardItemWidget(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const ResumeView(),
+                            ),
+                          );
+                        },
                         icon: IconAsset.resumeIcon,
                         title: "Resume",
                       ),
