@@ -50,10 +50,10 @@ class CustomTextformfield extends StatelessWidget {
               )
             : Text(
                 label,
-                style: theme.textTheme.labelLarge!.copyWith(
-                  color: theme.colorScheme.onSurface,
-                ),
               ),
+        labelStyle: theme.textTheme.labelMedium!.copyWith(
+          color: theme.colorScheme.onSurface,
+        ),
         suffixIcon: suffix,
       ),
     );

@@ -24,7 +24,7 @@ class RegisterView extends StatelessWidget {
                 width: double.infinity,
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: theme.colorScheme.onSurface.withOpacity(.50),
+                    color: theme.colorScheme.onSurface.withOpacity(.5),
                   ),
                   borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(35),

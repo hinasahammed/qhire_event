@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:provider/provider.dart';
 import 'package:qhire_event/res/components/common/custom_button.dart';
-import 'package:qhire_event/viewmodel/controller/onboard/onboard_viewmodel.dart';
+import 'package:qhire_event/viewmodel/provider/onboard/onboard_viewmodel.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class CustomOnboardWidget extends StatelessWidget {

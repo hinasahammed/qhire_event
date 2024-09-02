@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:qhire_event/res/components/event/cancelled_event_list.dart';
 import 'package:qhire_event/res/components/event/upcoming_event_list.dart';
 import 'package:qhire_event/view/event/widget/event_tabbar_view_widget.dart';
-import 'package:qhire_event/viewmodel/controller/event/event_viewmodel.dart';
+import 'package:qhire_event/viewmodel/provider/event/event_viewmodel.dart';
 
 class EventView extends StatelessWidget {
   const EventView({super.key});

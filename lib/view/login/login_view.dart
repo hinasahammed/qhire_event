@@ -23,6 +23,7 @@ class LoginView extends StatelessWidget {
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(ImageAsset.background),
+                  fit: BoxFit.fitWidth,
                 ),
               ),
               child: Image.asset(ImageAsset.logo),

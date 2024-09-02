@@ -5,7 +5,7 @@ import 'package:qhire_event/view/event/event_view.dart';
 import 'package:qhire_event/view/home/home_view.dart';
 import 'package:qhire_event/view/jobs/jobs_view.dart';
 import 'package:qhire_event/view/profile/profile_view.dart';
-import 'package:qhire_event/viewmodel/controller/tabbar/tabbar_viewmodel.dart';
+import 'package:qhire_event/viewmodel/provider/tabbar/tabbar_viewmodel.dart';
 
 class CustomTabBar extends StatelessWidget {
   const CustomTabBar({super.key});
