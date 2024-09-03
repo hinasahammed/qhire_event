@@ -133,10 +133,11 @@ class RecomendedWidget extends StatelessWidget {
                     SizedBox(
                       height: 50,
                       child: CustomButton(
-                          onPressed: () {},
-                          backgroundColor: theme.colorScheme.primary,
-                          foreground: theme.colorScheme.onPrimary,
-                          btnText: "Apply"),
+                        onPressed: () {},
+                        backgroundColor: theme.colorScheme.primary,
+                        foreground: theme.colorScheme.onPrimary,
+                        btnText: "Apply",
+                      ),
                     )
                   ],
                 ),

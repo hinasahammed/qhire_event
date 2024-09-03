@@ -8,7 +8,8 @@ class ProfileCardItemWidget extends StatelessWidget {
   const ProfileCardItemWidget({
     super.key,
     required this.icon,
-    required this.title, this.onTap,
+    required this.title,
+    this.onTap,
   });
 
   @override
@@ -37,8 +38,9 @@ class ProfileCardItemWidget extends StatelessWidget {
               ),
             ),
             const Spacer(),
-            const Icon(
+            Icon(
               Icons.keyboard_arrow_right,
+              color: theme.colorScheme.onSurface,
             )
           ],
         ),

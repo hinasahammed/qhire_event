@@ -39,6 +39,12 @@ class CustomDropdownField extends StatelessWidget {
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
         ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15),
+          borderSide: BorderSide(
+            color: theme.colorScheme.onSurface.withOpacity(.2),
+          ),
+        ),
       ),
       onChanged: (value) {},
     );
