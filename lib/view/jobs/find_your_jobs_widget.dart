@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:qhire_event/res/components/common/customText/title_large_text.dart';
 import 'package:qhire_event/res/components/jobs/all_job_list.dart';
 import 'package:qhire_event/res/components/jobs/job_card.dart';
 
@@ -8,16 +9,12 @@ class FindYourJobsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          "Find Your Jobs Today",
-          style: theme.textTheme.titleLarge!.copyWith(
-            color: theme.colorScheme.onSurface,
-            fontWeight: FontWeight.bold,
-          ),
+        const TitleLargeText(
+          text: "Find Your Jobs Today",
+          fontWeight: FontWeight.bold,
         ),
         const Gap(20),
         ListView.separated(

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:qhire_event/assets/images/image_asset.dart';
+import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
+import 'package:qhire_event/res/components/common/customText/title_large_text.dart';
 import 'package:qhire_event/res/components/common/custom_button.dart';
 
 class RecomendedWidget extends StatelessWidget {
@@ -15,12 +17,9 @@ class RecomendedWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Recommended For You",
-            style: theme.textTheme.titleLarge!.copyWith(
-              color: theme.colorScheme.onSurface,
-              fontWeight: FontWeight.bold,
-            ),
+          const TitleLargeText(
+            text: "Recommended For You",
+            fontWeight: FontWeight.bold,
           ),
           const Gap(20),
           SizedBox(
@@ -56,22 +55,16 @@ class RecomendedWidget extends StatelessWidget {
                           ),
                         ),
                         const Gap(20),
-                        Column(
+                        const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              "Softroniics",
-                              style: theme.textTheme.bodyLarge!.copyWith(
-                                color: theme.colorScheme.onSurface,
-                                fontWeight: FontWeight.w400,
-                              ),
+                            BodyLargeText(
+                              text: "Softroniics",
+                              fontWeight: FontWeight.w400,
                             ),
-                            Text(
-                              "UI/UX Designer",
-                              style: theme.textTheme.bodyLarge!.copyWith(
-                                color: theme.colorScheme.onSurface,
-                              ),
-                            )
+                            BodyLargeText(
+                              text: "UI/UX Designer",
+                            ),
                           ],
                         ),
                         const Spacer(),
@@ -83,11 +76,10 @@ class RecomendedWidget extends StatelessWidget {
                       ],
                     ),
                     const Gap(10),
-                    Text(
-                      "2nd Floor, Maniyattukudi Asfa Building,Mavoor Road Calicut, Kerala",
-                      style: theme.textTheme.bodyLarge!.copyWith(
-                        color: theme.colorScheme.onSurface.withOpacity(.5),
-                      ),
+                    BodyLargeText(
+                      text:
+                          "2nd Floor, Maniyattukudi Asfa Building,Mavoor Road Calicut, Kerala",
+                      textColor: theme.colorScheme.onSurface.withOpacity(.5),
                     ),
                     const Gap(10),
                     Wrap(
@@ -95,11 +87,10 @@ class RecomendedWidget extends StatelessWidget {
                       crossAxisAlignment: WrapCrossAlignment.center,
                       // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          "Full Time",
-                          style: theme.textTheme.bodyLarge!.copyWith(
-                            color: theme.colorScheme.onSurface.withOpacity(.7),
-                          ),
+                        BodyLargeText(
+                          text: "Full Time",
+                          textColor:
+                              theme.colorScheme.onSurface.withOpacity(.7),
                         ),
                         const Gap(5),
                         Icon(
@@ -108,11 +99,10 @@ class RecomendedWidget extends StatelessWidget {
                           color: theme.colorScheme.onSurface.withOpacity(.7),
                         ),
                         const Gap(5),
-                        Text(
-                          "Exp 3 Years",
-                          style: theme.textTheme.bodyLarge!.copyWith(
-                            color: theme.colorScheme.onSurface.withOpacity(.7),
-                          ),
+                        BodyLargeText(
+                          text: "Exp 3 Years",
+                          textColor:
+                              theme.colorScheme.onSurface.withOpacity(.7),
                         ),
                         const Gap(5),
                         Icon(
@@ -121,12 +111,11 @@ class RecomendedWidget extends StatelessWidget {
                           color: theme.colorScheme.onSurface.withOpacity(.7),
                         ),
                         const Gap(5),
-                        Text(
-                          "Remote",
-                          style: theme.textTheme.bodyLarge!.copyWith(
-                            color: theme.colorScheme.onSurface.withOpacity(.7),
-                          ),
-                        )
+                        BodyLargeText(
+                          text: "Remote",
+                          textColor:
+                              theme.colorScheme.onSurface.withOpacity(.7),
+                        ),
                       ],
                     ),
                     const Gap(30),

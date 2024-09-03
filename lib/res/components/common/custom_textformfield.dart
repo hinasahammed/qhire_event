@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qhire_event/res/components/common/customText/label_large_text.dart';
 
 class CustomTextformfield extends StatelessWidget {
   final TextEditingController? controller;
@@ -48,12 +49,7 @@ class CustomTextformfield extends StatelessWidget {
                   ],
                 ),
               )
-            : Text(
-                label,
-              ),
-        labelStyle: theme.textTheme.labelLarge!.copyWith(
-          color: theme.colorScheme.onSurface,
-        ),
+            : LabelLargeText(text: label),
         suffixIcon: suffix,
       ),
     );

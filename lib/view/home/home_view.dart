@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
 import 'package:qhire_event/view/home/widget/featured_jobs_widget.dart';
 import 'package:qhire_event/view/home/widget/home_tab_items_widget.dart';
 import 'package:qhire_event/view/home/widget/home_top_container_widget.dart';
@@ -15,11 +16,9 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Text(
-          "Logo",
-          style: theme.textTheme.bodyLarge!.copyWith(
-            color: theme.colorScheme.primary,
-          ),
+        title: BodyLargeText(
+          text: "Logo",
+          textColor: theme.colorScheme.primary,
         ),
         actions: [
           IconButton(

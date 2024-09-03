@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:qhire_event/model/event_model.dart';
+import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
+import 'package:qhire_event/res/components/common/customText/label_large_text.dart';
 import 'package:qhire_event/view/eventDetails/event_details_view.dart';
 
 class EventTabbarViewWidget extends StatelessWidget {
@@ -57,29 +59,20 @@ class EventTabbarViewWidget extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          data.title,
-                          style: theme.textTheme.bodyLarge!.copyWith(
-                            color: theme.colorScheme.onSurface,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        BodyLargeText(
+                          text: data.title,
+                          fontWeight: FontWeight.bold,
                         ),
                         const Gap(5),
-                        Text(
-                          data.desc,
-                          style: theme.textTheme.labelLarge!.copyWith(
-                            color: theme.colorScheme.onSurface,
-                            fontWeight: FontWeight.w500,
-                          ),
+                        LabelLargeText(
+                          text: data.desc,
+                          fontWeight: FontWeight.w500,
                         ),
                         const Gap(5),
-                        Text(
-                          data.date,
-                          style: theme.textTheme.bodyLarge!.copyWith(
-                            color: theme.colorScheme.onSurface,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        )
+                        BodyLargeText(
+                          text: data.date,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ],
                     ),
                   )

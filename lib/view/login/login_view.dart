@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:qhire_event/assets/icons/icon_asset.dart';
 import 'package:qhire_event/assets/images/image_asset.dart';
+import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
+import 'package:qhire_event/res/components/common/customText/label_large_text.dart';
+import 'package:qhire_event/res/components/common/customText/title_large_text.dart';
 import 'package:qhire_event/res/components/common/custom_button.dart';
 import 'package:qhire_event/res/components/common/custom_textformfield.dart';
 import 'package:qhire_event/view/register/register_view.dart';
@@ -44,19 +47,13 @@ class LoginView extends StatelessWidget {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Text(
-                        "Welcome back",
-                        style: theme.textTheme.titleLarge!.copyWith(
-                          color: theme.colorScheme.onSurface,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      const TitleLargeText(
+                        text: "Welcome back",
+                        fontWeight: FontWeight.bold,
                       ),
                       const Gap(5),
-                      Text(
-                        "Login to your account",
-                        style: theme.textTheme.labelLarge!.copyWith(
-                          color: theme.colorScheme.onSurface,
-                        ),
+                      const LabelLargeText(
+                        text: "Login to your account",
                       ),
                       const Gap(20),
                       CustomTextformfield(
@@ -83,11 +80,8 @@ class LoginView extends StatelessWidget {
                           Row(
                             children: [
                               Checkbox(value: true, onChanged: (value) {}),
-                              Text(
-                                "Remember me",
-                                style: theme.textTheme.labelLarge!.copyWith(
-                                  color: theme.colorScheme.onSurface,
-                                ),
+                              const LabelLargeText(
+                                text: "Remember me",
                               ),
                             ],
                           ),
@@ -109,11 +103,8 @@ class LoginView extends StatelessWidget {
                         ),
                       ),
                       const Gap(20),
-                      Text(
-                        "Or",
-                        style: theme.textTheme.labelLarge!.copyWith(
-                          color: theme.colorScheme.onSurface,
-                        ),
+                      const LabelLargeText(
+                        text: "Or",
                       ),
                       const Gap(20),
                       Row(
@@ -149,11 +140,8 @@ class LoginView extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
-                            "Don't have an account?",
-                            style: theme.textTheme.bodyLarge!.copyWith(
-                              color: theme.colorScheme.onSurface,
-                            ),
+                          const BodyLargeText(
+                            text: "Don't have an account?",
                           ),
                           TextButton(
                             onPressed: () {

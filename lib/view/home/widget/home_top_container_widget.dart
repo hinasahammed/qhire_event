@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:qhire_event/res/components/common/customText/label_large_text.dart';
 import 'package:qhire_event/res/components/common/custom_textformfield.dart';
 import 'package:qhire_event/view/home/widget/recent_items_widget.dart';
 import 'package:qhire_event/viewmodel/services/home/home_services.dart';
@@ -17,15 +18,16 @@ class HomeTopContainer extends StatelessWidget {
           width: double.infinity,
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-              border: Border(
-                bottom: BorderSide(
-                  color: theme.colorScheme.onSurface.withOpacity(.1),
-                ),
+            border: Border(
+              bottom: BorderSide(
+                color: theme.colorScheme.onSurface.withOpacity(.1),
               ),
-              borderRadius: const BorderRadius.only(
-                bottomLeft: Radius.circular(20),
-                bottomRight: Radius.circular(20),
-              ),),
+            ),
+            borderRadius: const BorderRadius.only(
+              bottomLeft: Radius.circular(20),
+              bottomRight: Radius.circular(20),
+            ),
+          ),
           child: Column(
             children: [
               Row(
@@ -75,12 +77,9 @@ class HomeTopContainer extends StatelessWidget {
                     Icons.location_on,
                     color: theme.colorScheme.primary,
                   ),
-                  Text(
-                    "Calicut, kerala",
-                    style: theme.textTheme.labelLarge!.copyWith(
-                      color: theme.colorScheme.onSurface,
-                    ),
-                  )
+                  const LabelLargeText(
+                    text: "Calicut, kerala",
+                  ),
                 ],
               ),
               const Gap(15),

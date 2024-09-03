@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:qhire_event/res/components/common/customText/label_large_text.dart';
+import 'package:qhire_event/res/components/common/customText/title_large_text.dart';
 import 'package:qhire_event/res/components/common/custom_button.dart';
 import 'package:qhire_event/res/components/common/custom_dropdown_field.dart';
 import 'package:qhire_event/res/components/common/custom_textformfield.dart';
@@ -34,19 +36,13 @@ class RegisterView extends StatelessWidget {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Text(
-                        "Register",
-                        style: theme.textTheme.titleLarge!.copyWith(
-                          color: theme.colorScheme.onSurface,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      const TitleLargeText(
+                        text: "Register",
+                        fontWeight: FontWeight.bold,
                       ),
                       const Gap(5),
-                      Text(
-                        "Create your account",
-                        style: theme.textTheme.labelLarge!.copyWith(
-                          color: theme.colorScheme.onSurface,
-                        ),
+                      const LabelLargeText(
+                        text: "Create your account",
                       ),
                       const Gap(20),
                       CustomTextformfield(

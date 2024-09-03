@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
+import 'package:qhire_event/res/components/common/customText/label_large_text.dart';
 import 'package:qhire_event/res/components/common/custom_button.dart';
 
 class SkillsView extends StatelessWidget {
@@ -23,11 +25,8 @@ class SkillsView extends StatelessWidget {
             )),
             child: Row(
               children: [
-                Text(
-                  "Add Your Skills",
-                  style: theme.textTheme.bodyLarge!.copyWith(
-                    color: theme.colorScheme.onSurface,
-                  ),
+                const BodyLargeText(
+                  text: "Add Your Skills",
                 ),
                 const Spacer(),
                 Icon(
@@ -58,12 +57,9 @@ class SkillsView extends StatelessWidget {
                       color: theme.colorScheme.surface,
                     ),
                     const Gap(10),
-                    Text(
-                      "UI/UX Design",
-                      style: theme.textTheme.labelLarge!.copyWith(
-                        color: theme.colorScheme.surface,
-                      ),
-                    )
+                    const LabelLargeText(
+                      text: "UI/UX Design",
+                    ),
                   ],
                 ),
               ),

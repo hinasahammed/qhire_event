@@ -2,6 +2,7 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cached_pdfview/flutter_cached_pdfview.dart';
 import 'package:gap/gap.dart';
+import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
 
 class ResumeView extends StatelessWidget {
   const ResumeView({super.key});
@@ -45,12 +46,9 @@ class ResumeView extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      "Upload Different File",
-                      style: theme.textTheme.bodyLarge!.copyWith(
-                        color: theme.colorScheme.onSurface,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    const BodyLargeText(
+                      text: "Upload Different File",
+                      fontWeight: FontWeight.bold,
                     ),
                     const Gap(10),
                     Icon(

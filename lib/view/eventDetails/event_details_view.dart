@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:qhire_event/model/event_model.dart';
+import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
+import 'package:qhire_event/res/components/common/customText/title_large_text.dart';
+import 'package:qhire_event/res/components/common/customText/title_medium_text.dart';
 import 'package:qhire_event/res/components/common/custom_button.dart';
 
 class EventDetailsView extends StatelessWidget {
@@ -24,20 +27,14 @@ class EventDetailsView extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      eventItem.title,
-                      style: theme.textTheme.titleLarge!.copyWith(
-                        color: theme.colorScheme.onSurface,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    TitleLargeText(
+                      text: eventItem.title,
+                      fontWeight: FontWeight.bold,
                     ),
                     const Gap(5),
-                    Text(
-                      eventItem.date,
-                      style: theme.textTheme.bodyLarge!.copyWith(
-                        color: theme.colorScheme.onSurface,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    BodyLargeText(
+                      text: eventItem.date,
+                      fontWeight: FontWeight.bold,
                     ),
                   ],
                 ),
@@ -64,20 +61,15 @@ class EventDetailsView extends StatelessWidget {
               ),
             ),
             const Gap(20),
-            Text(
-              eventItem.desc,
-              style: theme.textTheme.titleMedium!.copyWith(
-                color: theme.colorScheme.onSurface,
-                fontWeight: FontWeight.w600,
-              ),
+            TitleMediumText(
+              text: eventItem.desc,
+              fontWeight: FontWeight.w600,
             ),
             const Gap(20),
-            Text(
-              "Speakers: John Doe - CEO, TechCorp , Jane Smith - CTO, InnovateX",
-              style: theme.textTheme.titleMedium!.copyWith(
-                color: theme.colorScheme.onSurface,
-                fontWeight: FontWeight.w600,
-              ),
+            const TitleMediumText(
+              text:
+                  "Speakers: John Doe - CEO, TechCorp , Jane Smith - CTO, InnovateX",
+              fontWeight: FontWeight.w600,
             ),
             const Gap(20),
             Row(
@@ -89,11 +81,9 @@ class EventDetailsView extends StatelessWidget {
                 ),
                 const Gap(10),
                 Expanded(
-                  child: Text(
-                    "Tech Hall, Silicon Valley , Map and Directions",
-                    style: theme.textTheme.titleMedium!.copyWith(
-                      color: theme.colorScheme.onSurface.withOpacity(.6),
-                    ),
+                  child: TitleMediumText(
+                    text: "Tech Hall, Silicon Valley , Map and Directions",
+                    textColor: theme.colorScheme.onSurface.withOpacity(.6),
                   ),
                 )
               ],
@@ -108,11 +98,9 @@ class EventDetailsView extends StatelessWidget {
                 ),
                 const Gap(10),
                 Expanded(
-                  child: Text(
-                    "Time : 11 AM",
-                    style: theme.textTheme.titleMedium!.copyWith(
-                      color: theme.colorScheme.onSurface.withOpacity(.6),
-                    ),
+                  child: TitleMediumText(
+                    text: "Time : 11 AM",
+                    textColor: theme.colorScheme.onSurface.withOpacity(.6),
                   ),
                 )
               ],

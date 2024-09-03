@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
 
 class ProfileCardItemWidget extends StatelessWidget {
   final String icon;
@@ -31,11 +32,8 @@ class ProfileCardItemWidget extends StatelessWidget {
           children: [
             Image.asset(icon),
             const Gap(20),
-            Text(
-              title,
-              style: theme.textTheme.bodyLarge!.copyWith(
-                color: theme.colorScheme.onSurface,
-              ),
+            BodyLargeText(
+              text: title,
             ),
             const Spacer(),
             Icon(

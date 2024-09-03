@@ -1,6 +1,7 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:qhire_event/res/components/common/customText/title_large_text.dart';
 import 'package:qhire_event/res/components/common/custom_button.dart';
 import 'package:qhire_event/res/components/common/custom_textformfield.dart';
 
@@ -132,13 +133,11 @@ class EditProfileView extends StatelessWidget {
                 width: double.infinity,
                 child: Column(
                   children: [
-                    Text(
-                      "Drag and Drop Files",
-                      style: theme.textTheme.titleLarge!.copyWith(
-                        color: theme.colorScheme.onSurface,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    const TitleLargeText(
+                      text: "Drag and Drop Files",
+                      fontWeight: FontWeight.bold,
                     ),
+                    
                     const Gap(10),
                     Icon(
                       Icons.cloud_upload_outlined,

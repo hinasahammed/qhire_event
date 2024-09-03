@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
+import 'package:qhire_event/res/components/common/customText/label_large_text.dart';
 import 'package:qhire_event/res/components/common/custom_button.dart';
 
 class UploadWidget extends StatelessWidget {
@@ -13,12 +15,9 @@ class UploadWidget extends StatelessWidget {
       children: [
         Row(
           children: [
-            Text(
-              "Upload $fileName ",
-              style: theme.textTheme.labelLarge!.copyWith(
-                color: theme.colorScheme.onSurface,
-                fontWeight: FontWeight.bold,
-              ),
+            LabelLargeText(
+              text: "Upload $fileName ",
+              fontWeight: FontWeight.bold,
             ),
             RichText(
               text: TextSpan(
@@ -58,12 +57,9 @@ class UploadWidget extends StatelessWidget {
                 btnText: "Choose file",
               ),
               const Gap(10),
-              Text(
-                "No file chosen",
-                style: theme.textTheme.bodyLarge!.copyWith(
-                  color: theme.colorScheme.onSurface,
-                ),
-              )
+              const BodyLargeText(
+                text: "No file chosen",
+              ),
             ],
           ),
         ),

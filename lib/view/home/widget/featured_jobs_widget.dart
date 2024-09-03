@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
+import 'package:qhire_event/res/components/common/customText/label_large_text.dart';
+import 'package:qhire_event/res/components/common/customText/title_large_text.dart';
 import 'package:qhire_event/res/components/common/custom_button.dart';
 import 'package:qhire_event/res/components/home/featured_job_list.dart';
 
@@ -15,12 +18,9 @@ class FeaturedJobsWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Featured Jobs",
-            style: theme.textTheme.titleLarge!.copyWith(
-              color: theme.colorScheme.onSurface,
-              fontWeight: FontWeight.bold,
-            ),
+          const TitleLargeText(
+            text: "Featured Jobs",
+            fontWeight: FontWeight.bold,
           ),
           const Gap(20),
           ListView.separated(
@@ -48,11 +48,9 @@ class FeaturedJobsWidget extends StatelessWidget {
                             border:
                                 Border.all(color: theme.colorScheme.primary),
                           ),
-                          child: Text(
-                            data.postDate,
-                            style: theme.textTheme.labelLarge!.copyWith(
-                              color: theme.colorScheme.primary,
-                            ),
+                          child: LabelLargeText(
+                            text: data.postDate,
+                            textColor: theme.colorScheme.primary,
                           ),
                         ),
                       ),
@@ -76,19 +74,14 @@ class FeaturedJobsWidget extends StatelessWidget {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                data.jobName,
-                                style: theme.textTheme.bodyLarge!.copyWith(
-                                  color: theme.colorScheme.onSurface,
-                                  fontWeight: FontWeight.bold,
-                                ),
+                              BodyLargeText(
+                                text: data.jobName,
+                                fontWeight: FontWeight.bold,
                               ),
-                              Text(
-                                data.companyName,
-                                style: theme.textTheme.bodyLarge!.copyWith(
-                                  color: theme.colorScheme.onSurface
-                                      .withOpacity(.5),
-                                ),
+                              BodyLargeText(
+                                text: data.companyName,
+                                textColor:
+                                    theme.colorScheme.onSurface.withOpacity(.5),
                               ),
                             ],
                           ),
@@ -100,12 +93,10 @@ class FeaturedJobsWidget extends StatelessWidget {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                data.location,
-                                style: theme.textTheme.bodyLarge!.copyWith(
-                                  color: theme.colorScheme.onSurface
-                                      .withOpacity(.5),
-                                ),
+                              BodyLargeText(
+                                text: data.location,
+                                textColor:
+                                    theme.colorScheme.onSurface.withOpacity(.5),
                               ),
                               const Gap(5),
                               Container(
@@ -115,11 +106,9 @@ class FeaturedJobsWidget extends StatelessWidget {
                                       color: theme.colorScheme.primary),
                                   borderRadius: BorderRadius.circular(10),
                                 ),
-                                child: Text(
-                                  data.jobType,
-                                  style: theme.textTheme.labelLarge!.copyWith(
-                                    color: theme.colorScheme.primary,
-                                  ),
+                                child: LabelLargeText(
+                                  text: data.jobType,
+                                  textColor: theme.colorScheme.primary,
                                 ),
                               )
                             ],

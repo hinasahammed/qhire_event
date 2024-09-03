@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:qhire_event/assets/images/image_asset.dart';
+import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
+import 'package:qhire_event/res/components/common/customText/title_large_text.dart';
 import 'package:qhire_event/res/components/common/custom_button.dart';
 import 'package:qhire_event/view/login/login_view.dart';
 
@@ -34,19 +36,14 @@ class OnboardFinalWidget extends StatelessWidget {
             child: Column(
               children: [
                 const Spacer(),
-                Text(
-                  "Hello!",
-                  style: theme.textTheme.titleLarge!.copyWith(
-                    color: theme.colorScheme.onSurface,
-                    fontWeight: FontWeight.bold,
-                  ),
+                const TitleLargeText(
+                  text: "Hello!",
+                  fontWeight: FontWeight.bold,
                 ),
                 const Gap(30),
-                Text(
-                  "Your personalized gateway to success starts here with our job finder app’s welcome screen",
-                  style: theme.textTheme.bodyLarge!.copyWith(
-                    color: theme.colorScheme.onSurface,
-                  ),
+                const BodyLargeText(
+                  text:
+                      "Your personalized gateway to success starts here with our job finder app’s welcome screen",
                   textAlign: TextAlign.center,
                 ),
                 const Gap(30),

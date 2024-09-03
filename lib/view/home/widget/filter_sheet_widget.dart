@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:provider/provider.dart';
 import 'package:qhire_event/assets/icons/icon_asset.dart';
+import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
+import 'package:qhire_event/res/components/common/customText/label_large_text.dart';
 import 'package:qhire_event/res/components/home/field_filter_list.dart';
 import 'package:qhire_event/res/components/home/salary_filter_list.dart';
 import 'package:qhire_event/res/components/home/type_filter_list.dart';
@@ -31,12 +33,9 @@ class FilterSheetWidget extends StatelessWidget {
               child: Image.asset(IconAsset.arrowDown),
             ),
             const Gap(10),
-            Text(
-              "Filter",
-              style: theme.textTheme.bodyLarge!.copyWith(
-                color: theme.colorScheme.onSurface,
-                fontWeight: FontWeight.bold,
-              ),
+            const BodyLargeText(
+              text: "Filter",
+              fontWeight: FontWeight.bold,
             ),
             const Gap(20),
             Consumer<HomeViewmodel>(
@@ -59,13 +58,11 @@ class FilterSheetWidget extends StatelessWidget {
                         ),
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Text(
-                        "Field",
-                        style: theme.textTheme.labelLarge!.copyWith(
-                          color: value.currentFilter == 0
-                              ? theme.colorScheme.onPrimary
-                              : theme.colorScheme.onSurface,
-                        ),
+                      child: LabelLargeText(
+                        text: "Field",
+                        textColor: value.currentFilter == 0
+                            ? theme.colorScheme.onPrimary
+                            : theme.colorScheme.onSurface,
                       ),
                     ),
                   ),
@@ -81,13 +78,11 @@ class FilterSheetWidget extends StatelessWidget {
                           color: theme.colorScheme.primary,
                         ),
                       ),
-                      child: Text(
-                        "Type",
-                        style: theme.textTheme.labelLarge!.copyWith(
-                          color: value.currentFilter == 1
-                              ? theme.colorScheme.onPrimary
-                              : theme.colorScheme.onSurface,
-                        ),
+                      child: LabelLargeText(
+                        text: "Type",
+                        textColor: value.currentFilter == 1
+                            ? theme.colorScheme.onPrimary
+                            : theme.colorScheme.onSurface,
                       ),
                     ),
                   ),
@@ -103,13 +98,11 @@ class FilterSheetWidget extends StatelessWidget {
                         ),
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Text(
-                        "Salary",
-                        style: theme.textTheme.labelLarge!.copyWith(
-                          color: value.currentFilter == 2
-                              ? theme.colorScheme.onPrimary
-                              : theme.colorScheme.onSurface,
-                        ),
+                      child: LabelLargeText(
+                        text: "Salary",
+                        textColor: value.currentFilter == 2
+                            ? theme.colorScheme.onPrimary
+                            : theme.colorScheme.onSurface,
                       ),
                     ),
                   ),

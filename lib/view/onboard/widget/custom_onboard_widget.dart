@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:provider/provider.dart';
+import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
+import 'package:qhire_event/res/components/common/customText/label_large_text.dart';
+import 'package:qhire_event/res/components/common/customText/title_large_text.dart';
 import 'package:qhire_event/res/components/common/custom_button.dart';
 import 'package:qhire_event/viewmodel/provider/onboard/onboard_viewmodel.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -63,18 +66,12 @@ class CustomOnboardWidget extends StatelessWidget {
                   ),
                 ),
                 const Gap(30),
-                Text(
-                  warmingText,
-                  style: theme.textTheme.titleLarge!.copyWith(
-                    color: theme.colorScheme.onSurface,
-                    fontWeight: FontWeight.bold,
-                  ),
+                TitleLargeText(
+                  text: warmingText,
+                  fontWeight: FontWeight.bold,
                 ),
-                Text(
-                  desc,
-                  style: theme.textTheme.bodyLarge!.copyWith(
-                    color: theme.colorScheme.onSurface,
-                  ),
+                BodyLargeText(
+                  text: desc,
                   textAlign: TextAlign.center,
                 ),
                 const Gap(30),
@@ -93,11 +90,8 @@ class CustomOnboardWidget extends StatelessWidget {
                     onPressed: () {
                       pageController.jumpToPage(2);
                     },
-                    child: Text(
-                      "Skip",
-                      style: theme.textTheme.labelLarge!.copyWith(
-                        color: theme.colorScheme.onSurface,
-                      ),
+                    child: const LabelLargeText(
+                      text: "Skip",
                     ),
                   ),
                 const Gap(20),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:qhire_event/assets/icons/icon_asset.dart';
 import 'package:qhire_event/assets/images/image_asset.dart';
+import 'package:qhire_event/res/components/common/customText/label_large_text.dart';
 import 'package:qhire_event/view/certification/certification_view.dart';
 import 'package:qhire_event/view/editProfile/edit_profile_view.dart';
 import 'package:qhire_event/view/profile/widget/profile_card_item_widget.dart';
@@ -62,17 +63,11 @@ class ProfileView extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Text(
-                        "UI/UX Designer",
-                        style: theme.textTheme.labelLarge!.copyWith(
-                          color: theme.colorScheme.onSurface,
-                        ),
+                      const LabelLargeText(
+                        text: "UI/UX Designer",
                       ),
-                      Text(
-                        "catherin007@gmail.com",
-                        style: theme.textTheme.labelLarge!.copyWith(
-                          color: theme.colorScheme.onSurface,
-                        ),
+                      const LabelLargeText(
+                        text: "catherin007@gmail.com",
                       ),
                       const Gap(30),
                       ProfileCardItemWidget(

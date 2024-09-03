@@ -1,6 +1,8 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
+import 'package:qhire_event/res/components/common/customText/label_large_text.dart';
 import 'package:qhire_event/res/components/qualification/qualification_list.dart';
 import 'package:qhire_event/view/addQualification/add_qualification.dart';
 
@@ -39,27 +41,18 @@ class QualificationView extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            data.courseName,
-                            style: theme.textTheme.bodyLarge!.copyWith(
-                              color: theme.colorScheme.onSurface,
-                              fontWeight: FontWeight.bold,
-                            ),
+                          BodyLargeText(
+                            text: data.courseName,
+                            fontWeight: FontWeight.bold,
                           ),
                           const Gap(5),
-                          Text(
-                            data.institutionName,
-                            style: theme.textTheme.labelLarge!.copyWith(
-                              color: theme.colorScheme.onSurface,
-                            ),
+                          LabelLargeText(
+                            text: data.institutionName,
                           ),
                           const Gap(5),
-                          Text(
-                            data.year,
-                            style: theme.textTheme.labelLarge!.copyWith(
-                              color: theme.colorScheme.onSurface,
-                            ),
-                          )
+                          LabelLargeText(
+                            text: data.year,
+                          ),
                         ],
                       ),
                       const Spacer(),

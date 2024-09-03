@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:qhire_event/model/filter_model.dart';
+import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
 
 class FieldFilterWidget extends StatelessWidget {
   final List<FilterModel> list;
@@ -19,12 +20,9 @@ class FieldFilterWidget extends StatelessWidget {
             onChanged: (value) {},
           ),
           const Gap(10),
-          Text(
-            list[index].filterName,
-            style: theme.textTheme.bodyLarge!.copyWith(
-              color: theme.colorScheme.onSurface,
-            ),
-          )
+          BodyLargeText(
+            text: list[index].filterName,
+          ),
         ],
       ),
     );

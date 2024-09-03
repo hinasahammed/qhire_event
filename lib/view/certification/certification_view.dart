@@ -2,6 +2,7 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:qhire_event/res/components/certification/certificates_list.dart';
+import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
 
 class CertificationView extends StatelessWidget {
   const CertificationView({super.key});
@@ -41,13 +42,11 @@ class CertificationView extends StatelessWidget {
                       ),
                       const Gap(10),
                       Expanded(
-                          child: Text(
-                        data.courseNAme,
-                        style: theme.textTheme.bodyLarge!.copyWith(
-                          color: theme.colorScheme.onSurface,
+                        child: BodyLargeText(
+                          text: data.courseNAme,
                           fontWeight: FontWeight.bold,
                         ),
-                      ))
+                      )
                     ],
                   ),
                 );

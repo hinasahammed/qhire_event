@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
 
 class HomeTabItemsWidget extends StatefulWidget {
   const HomeTabItemsWidget({super.key});
@@ -35,13 +36,11 @@ class _HomeTabItemsWidgetState extends State<HomeTabItemsWidget> {
           border:
               index != 0 ? Border.all(color: theme.colorScheme.primary) : null,
         ),
-        child: Text(
-          allTabs[index],
-          style: theme.textTheme.bodyLarge!.copyWith(
-            color: index == 0
-                ? theme.colorScheme.onPrimaryContainer
-                : theme.colorScheme.onSurface,
-          ),
+        child: BodyLargeText(
+          text: allTabs[index],
+          textColor: index == 0
+              ? theme.colorScheme.onPrimaryContainer
+              : theme.colorScheme.onSurface,
         ),
       ),
     );

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
+import 'package:qhire_event/res/components/common/customText/label_large_text.dart';
 
 class JobCard extends StatelessWidget {
   final String imageUrl;
@@ -43,19 +45,15 @@ class JobCard extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                companyName,
-                style: theme.textTheme.bodyLarge!.copyWith(
-                  color: theme.colorScheme.onSurface,
-                  fontWeight: FontWeight.bold,
-                ),
+              BodyLargeText(
+                text: companyName,
+                fontWeight: FontWeight.bold,
               ),
-              Text(
-                jobName,
-                style: theme.textTheme.labelLarge!.copyWith(
-                  color: theme.colorScheme.onSurface.withOpacity(.5),
-                ),
-              )
+              LabelLargeText(
+                text: jobName,
+                textColor: theme.colorScheme.onSurface.withOpacity(.5),
+              ),
+              
             ],
           ),
           const Spacer(),

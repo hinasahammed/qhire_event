@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
 
 class CustomButton extends StatelessWidget {
   final void Function()? onPressed;
@@ -15,7 +16,6 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor: backgroundColor,
@@ -24,12 +24,10 @@ class CustomButton extends StatelessWidget {
         ),
       ),
       onPressed: onPressed,
-      child: Text(
-        btnText,
-        style: theme.textTheme.bodyLarge!.copyWith(
-          color: foreground,
-          fontWeight: FontWeight.w600,
-        ),
+      child: BodyLargeText(
+        text: btnText,
+        fontWeight: FontWeight.w600,
+        textColor: foreground,
       ),
     );
   }

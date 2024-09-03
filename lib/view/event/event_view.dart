@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:qhire_event/res/components/common/customText/label_large_text.dart';
 import 'package:qhire_event/res/components/event/cancelled_event_list.dart';
 import 'package:qhire_event/res/components/event/upcoming_event_list.dart';
 import 'package:qhire_event/view/event/widget/event_tabbar_view_widget.dart';
@@ -12,15 +13,16 @@ class EventView extends StatelessWidget {
   Widget build(BuildContext context) {
     final eventProvider = Provider.of<EventViewmodel>(context, listen: false);
     final theme = Theme.of(context);
-    return Consumer<EventViewmodel>(builder: (context, value, child) => DefaultTabController(
-      length: 2,
-      initialIndex: value.currentTabIndex,
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text("Event"),
-          automaticallyImplyLeading: false,
-        ),
-        body: Column(
+    return Consumer<EventViewmodel>(
+      builder: (context, value, child) => DefaultTabController(
+        length: 2,
+        initialIndex: value.currentTabIndex,
+        child: Scaffold(
+          appBar: AppBar(
+            title: const Text("Event"),
+            automaticallyImplyLeading: false,
+          ),
+          body: Column(
             children: [
               TabBar(
                 onTap: (value) {
@@ -41,13 +43,11 @@ class EventView extends StatelessWidget {
                             ? theme.colorScheme.primary
                             : theme.colorScheme.surface,
                       ),
-                      child: Text(
-                        "Upcoming",
-                        style: theme.textTheme.labelLarge!.copyWith(
-                          color: value.currentTabIndex == 0
-                              ? theme.colorScheme.onPrimary
-                              : theme.colorScheme.onSurface,
-                        ),
+                      child: LabelLargeText(
+                        text: "Upcoming",
+                        textColor: value.currentTabIndex == 0
+                            ? theme.colorScheme.onPrimary
+                            : theme.colorScheme.onSurface,
                       ),
                     ),
                   ),
@@ -63,13 +63,11 @@ class EventView extends StatelessWidget {
                             ? theme.colorScheme.primary
                             : theme.colorScheme.surface,
                       ),
-                      child: Text(
-                        "Cancelled",
-                        style: theme.textTheme.labelLarge!.copyWith(
-                          color: value.currentTabIndex == 1
-                              ? theme.colorScheme.onPrimary
-                              : theme.colorScheme.onSurface,
-                        ),
+                      child: LabelLargeText(
+                        text: "Cancelled",
+                        textColor: value.currentTabIndex == 1
+                            ? theme.colorScheme.onPrimary
+                            : theme.colorScheme.onSurface,
                       ),
                     ),
                   ),
@@ -90,7 +88,8 @@ class EventView extends StatelessWidget {
               )
             ],
           ),
+        ),
       ),
-    ),);
+    );
   }
 }

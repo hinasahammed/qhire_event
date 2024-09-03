@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qhire_event/res/components/common/customText/label_large_text.dart';
 
 class CustomDropdownField extends StatelessWidget {
   final String hint;
@@ -28,12 +29,7 @@ class CustomDropdownField extends StatelessWidget {
                 ],
               ),
             )
-          : Text(
-              hint,
-              style: theme.textTheme.labelLarge!.copyWith(
-                color: theme.colorScheme.onSurface,
-              ),
-            ),
+          : LabelLargeText(text: hint),
       icon: const Icon(Icons.keyboard_arrow_down),
       decoration: InputDecoration(
         border: OutlineInputBorder(
