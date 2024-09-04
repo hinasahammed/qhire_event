@@ -7,6 +7,7 @@ class CustomTextformfield extends StatelessWidget {
   final Widget? suffix;
   final Widget? prefix;
   final bool isRequired;
+  final String? Function(String?)? validator;
   const CustomTextformfield({
     super.key,
     this.controller,
@@ -14,6 +15,7 @@ class CustomTextformfield extends StatelessWidget {
     this.suffix,
     this.isRequired = false,
     this.prefix,
+    this.validator,
   });
 
   @override
@@ -21,6 +23,7 @@ class CustomTextformfield extends StatelessWidget {
     final theme = Theme.of(context);
     return TextFormField(
       controller: controller,
+      validator: validator,
       decoration: InputDecoration(
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
