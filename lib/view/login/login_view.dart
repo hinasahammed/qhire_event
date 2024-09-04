@@ -73,7 +73,7 @@ class _LoginViewState extends State<LoginView> {
                             if (input == null || input.isEmpty) {
                               return "Enter an email";
                             }
-                            if (input.isValidEmail() == false) {
+                            if (!input.isValidEmail()) {
                               return "Check your email";
                             }
                             return null;
@@ -87,6 +87,15 @@ class _LoginViewState extends State<LoginView> {
                         const Gap(10),
                         CustomTextformfield(
                           controller: TextEditingController(),
+                          validator: (input) {
+                            if (input == null || input.isEmpty) {
+                              return "Enter a password";
+                            }
+                            if (!input.isValidPassword()) {
+                              return "Password length should be 8";
+                            }
+                            return null;
+                          },
                           suffix: Icon(
                             Icons.visibility,
                             color: theme.colorScheme.primary,
