@@ -6,7 +6,8 @@ import 'package:qhire_event/res/components/common/custom_button.dart';
 
 class UploadWidget extends StatelessWidget {
   final String fileName;
-  const UploadWidget({super.key, required this.fileName});
+  final void Function()? onPressed;
+  const UploadWidget({super.key, required this.fileName, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +54,7 @@ class UploadWidget extends StatelessWidget {
               CustomButton(
                 backgroundColor: theme.colorScheme.onSurface.withOpacity(.4),
                 foreground: theme.colorScheme.surface,
-                onPressed: () {},
+                onPressed: onPressed,
                 btnText: "Choose file",
               ),
               const Gap(10),

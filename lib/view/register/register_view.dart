@@ -181,7 +181,12 @@ class _RegisterViewState extends State<RegisterView> {
                             hint: "Area of Expertise",
                           ),
                           const Gap(10),
-                          const UploadWidget(fileName: "Photograph"),
+                          UploadWidget(
+                            onPressed: () {
+                              registerProvider.pickFile();
+                            },
+                            fileName: "Photograph",
+                          ),
                           const Gap(10),
                           const UploadWidget(fileName: "Resume"),
                           const Gap(20),

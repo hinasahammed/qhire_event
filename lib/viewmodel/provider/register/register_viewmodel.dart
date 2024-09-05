@@ -1,3 +1,4 @@
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 
 class RegisterViewmodel extends ChangeNotifier {
@@ -36,5 +37,21 @@ class RegisterViewmodel extends ChangeNotifier {
   void chnageAreaExpertise(String expertise) {
     _areaExpertise = expertise;
     notifyListeners();
+  }
+
+  Future<void> pickFile() async {
+    print("object");
+    FilePickerResult? result = await FilePicker.platform.pickFiles();
+
+    if (result != null) {
+      // If the user picked a file, you can access it here
+      PlatformFile file = result.files.first;
+      print('File name: ${file.name}');
+      print('File size: ${file.size}');
+      print('File path: ${file.path}');
+    } else {
+      // The user canceled the picker
+      print('No file selected');
+    }
   }
 }
