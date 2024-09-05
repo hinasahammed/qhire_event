@@ -7,12 +7,20 @@ class RegisterViewmodel extends ChangeNotifier {
   String _experience = '0-1 years';
   String _district = 'Alappuzha';
   String _areaExpertise = 'UI/UX';
+  String _photographName = '';
+  String _photographPath = '';
+  String _resumeName = '';
+  String _resumPath = '';
 
   String get gender => _gender;
   String get qualification => _qualification;
   String get experience => _experience;
   String get district => _district;
   String get areaExpertise => _areaExpertise;
+  String get photographName => _photographName;
+  String get photographPath => _photographPath;
+  String get resumeName => _resumeName;
+  String get resumPath => _resumPath;
 
   void changeGender(String newGender) {
     _gender = newGender;
@@ -39,16 +47,20 @@ class RegisterViewmodel extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> pickFile() async {
-    print("object");
+  Future<void> pickFile(String fileType) async {
     FilePickerResult? result = await FilePicker.platform.pickFiles();
 
     if (result != null) {
-      // If the user picked a file, you can access it here
       PlatformFile file = result.files.first;
-      print('File name: ${file.name}');
-      print('File size: ${file.size}');
-      print('File path: ${file.path}');
+      if (fileType != "Resume") {
+        _photographName = file.name;
+        _photographPath = file.path!;
+        notifyListeners();
+      } else {
+        _resumeName = file.name;
+        _resumPath = file.path!;
+        notifyListeners();
+      }
     } else {
       // The user canceled the picker
       print('No file selected');

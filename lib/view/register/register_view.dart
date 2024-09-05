@@ -183,12 +183,17 @@ class _RegisterViewState extends State<RegisterView> {
                           const Gap(10),
                           UploadWidget(
                             onPressed: () {
-                              registerProvider.pickFile();
+                              registerProvider.pickFile("Photograph");
                             },
                             fileName: "Photograph",
                           ),
                           const Gap(10),
-                          const UploadWidget(fileName: "Resume"),
+                          UploadWidget(
+                            onPressed: () {
+                              registerProvider.pickFile("Resume");
+                            },
+                            fileName: "Resume",
+                          ),
                           const Gap(20),
                           SizedBox(
                             width: double.infinity,
