@@ -6,22 +6,27 @@ class CustomButton extends StatelessWidget {
   final String btnText;
   final Color? backgroundColor;
   final Color? foreground;
+  final bool? isBorder;
   const CustomButton({
     super.key,
     this.onPressed,
     required this.btnText,
     this.backgroundColor,
     this.foreground,
+    this.isBorder,
   });
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor: backgroundColor,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15),
-        ),
+            borderRadius: BorderRadius.circular(15),
+            side: isBorder != null
+                ? BorderSide(color: theme.colorScheme.primary)
+                : BorderSide.none),
       ),
       onPressed: onPressed,
       child: BodyLargeText(

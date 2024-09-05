@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:qhire_event/assets/icons/icon_asset.dart';
 import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
 import 'package:qhire_event/res/components/common/customText/label_large_text.dart';
+import 'package:qhire_event/res/components/common/custom_button.dart';
 import 'package:qhire_event/res/components/home/field_filter_list.dart';
 import 'package:qhire_event/res/components/home/salary_filter_list.dart';
 import 'package:qhire_event/res/components/home/type_filter_list.dart';
@@ -137,6 +138,30 @@ class FilterSheetWidget extends StatelessWidget {
                 ],
               ),
             ),
+            Divider(
+              color: theme.colorScheme.onSurface.withOpacity(.2),
+            ),
+            const Gap(10),
+            Row(
+              children: [
+                Expanded(
+                  child: CustomButton(
+                    onPressed: () {},
+                    isBorder: true,
+                    btnText: "Clear",
+                  ),
+                ),
+                const Gap(10),
+                Expanded(
+                  child: CustomButton(
+                    backgroundColor: theme.colorScheme.primary,
+                    foreground: theme.colorScheme.onPrimary,
+                    onPressed: () {},
+                    btnText: "Apply",
+                  ),
+                )
+              ],
+            )
           ],
         ),
       ),

@@ -152,9 +152,7 @@ class _EditProfileViewState extends State<EditProfileView> {
                   if (input == null || input.isEmpty) {
                     return "Enter your gender";
                   }
-                  if (!input.isValidGender()) {
-                    return "Enter valid gender";
-                  }
+
                   return null;
                 },
                 label: "Gender",

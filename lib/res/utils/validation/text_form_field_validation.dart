@@ -23,12 +23,6 @@ extension TextFormFieldValidation on String {
     return regex.hasMatch(this);
   }
 
-  bool isValidGender() {
-    var regex = RegExp(r"^(male|female|other)$", caseSensitive: false);
-
-    return regex.hasMatch(this);
-  }
-
   bool isValidLinkedinProfile() {
     var regex = RegExp(
         r"^https:\/\/(www\.)?linkedin\.com\/in\/[a-zA-Z0-9-]{3,100}\/?$");

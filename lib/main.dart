@@ -5,6 +5,7 @@ import 'package:qhire_event/view/onboard/onboard_view.dart';
 import 'package:qhire_event/viewmodel/provider/event/event_viewmodel.dart';
 import 'package:qhire_event/viewmodel/provider/home/home_viewmodel.dart';
 import 'package:qhire_event/viewmodel/provider/onboard/onboard_viewmodel.dart';
+import 'package:qhire_event/viewmodel/provider/register/register_viewmodel.dart';
 import 'package:qhire_event/viewmodel/provider/tabbar/tabbar_viewmodel.dart';
 
 void main() {
@@ -29,6 +30,9 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (context) => EventViewmodel(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => RegisterViewmodel(),
         ),
       ],
       child: MaterialApp(
