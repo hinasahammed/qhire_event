@@ -66,4 +66,19 @@ class RegisterViewmodel extends ChangeNotifier {
       print('No file selected');
     }
   }
+
+  Future<void> resumePicker() async {
+    FilePickerResult? result = await FilePicker.platform.pickFiles();
+
+    if (result != null) {
+      PlatformFile file = result.files.first;
+      
+      _resumeName = file.name;
+      _resumPath = file.path!;
+      notifyListeners();
+    } else {
+      // The user canceled the picker
+      print('No file selected');
+    }
+  }
 }

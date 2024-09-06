@@ -12,6 +12,8 @@ class ResumeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final registerProvider =
+        Provider.of<RegisterViewmodel>(context, listen: false);
     return Scaffold(
       appBar: AppBar(
         title: const Text("Resume"),
@@ -43,22 +45,27 @@ class ResumeView extends StatelessWidget {
                 padding: const EdgeInsets.all(6),
                 dashPattern: const [8, 2],
                 color: theme.colorScheme.primary,
-                child: Container(
-                  padding: const EdgeInsets.all(8),
-                  width: double.infinity,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const BodyLargeText(
-                        text: "Upload Different File",
-                        fontWeight: FontWeight.bold,
-                      ),
-                      const Gap(10),
-                      Icon(
-                        Icons.file_upload_outlined,
-                        color: theme.colorScheme.primary,
-                      )
-                    ],
+                child: InkWell(
+                  onTap: () {
+                    registerProvider.resumePicker();
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.all(8),
+                    width: double.infinity,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const BodyLargeText(
+                          text: "Upload Different File",
+                          fontWeight: FontWeight.bold,
+                        ),
+                        const Gap(10),
+                        Icon(
+                          Icons.file_upload_outlined,
+                          color: theme.colorScheme.primary,
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
