@@ -76,64 +76,60 @@ class OnboardFinalWidget extends StatelessWidget {
       return Scaffold(
         body: SafeArea(
           child: SingleChildScrollView(
-            child: SizedBox(
-              height: size.height,
-              width: size.width,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Image.asset(ImageAsset.onboardFour),
-                  Container(
-                    width: double.infinity,
-                    padding: const EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(200),
-                        topRight: Radius.circular(200),
-                      ),
-                      border: Border.all(
-                        color: theme.colorScheme.primary,
-                      ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Image.asset(ImageAsset.onboardFour),
+                Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(200),
+                      topRight: Radius.circular(200),
                     ),
-                    child: Column(
-                      children: [
-                        const Gap(30),
-                        const TitleLargeText(
-                          text: "Hello!",
-                          fontWeight: FontWeight.bold,
-                        ),
-                        const Gap(30),
-                        SizedBox(
-                          width: size.width * .6,
-                          child: const BodyLargeText(
-                            text:
-                                "Your personalized gateway to success starts here with our job finder app’s welcome screen",
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                        const Gap(30),
-                        SizedBox(
-                          height: 50,
-                          width: double.infinity,
-                          child: CustomButton(
-                            foreground: theme.colorScheme.primary,
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const LoginView(),
-                                ),
-                              );
-                            },
-                            btnText: "I'm a Job Seeker",
-                          ),
-                        ),
-                        const Gap(20),
-                      ],
+                    border: Border.all(
+                      color: theme.colorScheme.primary,
                     ),
-                  )
-                ],
-              ),
+                  ),
+                  child: Column(
+                    children: [
+                      const Gap(30),
+                      const TitleLargeText(
+                        text: "Hello!",
+                        fontWeight: FontWeight.bold,
+                      ),
+                      const Gap(30),
+                      SizedBox(
+                        width: size.width * .6,
+                        child: const BodyLargeText(
+                          text:
+                              "Your personalized gateway to success starts here with our job finder app’s welcome screen",
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                      const Gap(30),
+                      SizedBox(
+                        height: 50,
+                        width: double.infinity,
+                        child: CustomButton(
+                          foreground: theme.colorScheme.primary,
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const LoginView(),
+                              ),
+                            );
+                          },
+                          btnText: "I'm a Job Seeker",
+                        ),
+                      ),
+                      const Gap(20),
+                    ],
+                  ),
+                )
+              ],
             ),
           ),
         ),
