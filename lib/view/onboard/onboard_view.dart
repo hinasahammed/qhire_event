@@ -14,10 +14,12 @@ class OnboardView extends StatefulWidget {
 
 class _OnboardViewState extends State<OnboardView> {
   final pageController = PageController();
+
   @override
   Widget build(BuildContext context) {
     final onboardProvider =
         Provider.of<OnboardViewmodel>(context, listen: false);
+        
     return Scaffold(
       body: SafeArea(
         child: PageView(

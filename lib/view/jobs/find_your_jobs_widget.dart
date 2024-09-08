@@ -20,6 +20,7 @@ class FindYourJobsWidget extends StatelessWidget {
         ListView.separated(
           itemCount: allJobList.length,
           shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
           separatorBuilder: (context, index) => const Gap(10),
           itemBuilder: (context, index) {
             final data = allJobList[index];

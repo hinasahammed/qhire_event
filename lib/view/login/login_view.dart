@@ -26,22 +26,22 @@ class _LoginViewState extends State<LoginView> {
     final theme = Theme.of(context);
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            Container(
-              width: double.infinity,
-              height: 300,
-              alignment: Alignment.center,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(ImageAsset.background),
-                  fit: BoxFit.fitWidth,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                width: double.infinity,
+                height: 300,
+                alignment: Alignment.center,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(ImageAsset.background),
+                    fit: BoxFit.fitWidth,
+                  ),
                 ),
+                child: Image.asset(ImageAsset.logo),
               ),
-              child: Image.asset(ImageAsset.logo),
-            ),
-            Expanded(
-              child: Container(
+              Container(
                 padding: const EdgeInsets.all(16),
                 width: double.infinity,
                 decoration: BoxDecoration(
@@ -53,147 +53,145 @@ class _LoginViewState extends State<LoginView> {
                     topRight: Radius.circular(35),
                   ),
                 ),
-                child: SingleChildScrollView(
-                  child: Form(
-                    key: _formKey,
-                    child: Column(
-                      children: [
-                        const TitleLargeText(
-                          text: "Welcome back",
-                          fontWeight: FontWeight.bold,
+                child: Form(
+                  key: _formKey,
+                  child: Column(
+                    children: [
+                      const TitleLargeText(
+                        text: "Welcome back",
+                        fontWeight: FontWeight.bold,
+                      ),
+                      const Gap(5),
+                      const LabelLargeText(
+                        text: "Login to your account",
+                      ),
+                      const Gap(20),
+                      CustomTextformfield(
+                        controller: emailController,
+                        validator: (input) {
+                          if (input == null || input.isEmpty) {
+                            return "Enter an email";
+                          }
+                          if (!input.isValidEmail()) {
+                            return "Check your email";
+                          }
+                          return null;
+                        },
+                        suffix: Icon(
+                          Icons.email,
+                          color: theme.colorScheme.primary,
                         ),
-                        const Gap(5),
-                        const LabelLargeText(
-                          text: "Login to your account",
+                        label: "Email",
+                      ),
+                      const Gap(10),
+                      CustomTextformfield(
+                        controller: TextEditingController(),
+                        validator: (input) {
+                          if (input == null || input.isEmpty) {
+                            return "Enter a password";
+                          }
+                          if (!input.isValidPassword()) {
+                            return "Password length should be 8";
+                          }
+                          return null;
+                        },
+                        suffix: Icon(
+                          Icons.visibility,
+                          color: theme.colorScheme.primary,
                         ),
-                        const Gap(20),
-                        CustomTextformfield(
-                          controller: emailController,
-                          validator: (input) {
-                            if (input == null || input.isEmpty) {
-                              return "Enter an email";
-                            }
-                            if (!input.isValidEmail()) {
-                              return "Check your email";
-                            }
-                            return null;
-                          },
-                          suffix: Icon(
-                            Icons.email,
-                            color: theme.colorScheme.primary,
+                        label: "Password",
+                      ),
+                      const Gap(10),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Checkbox(value: true, onChanged: (value) {}),
+                              const LabelLargeText(
+                                text: "Remember me",
+                              ),
+                            ],
                           ),
-                          label: "Email",
-                        ),
-                        const Gap(10),
-                        CustomTextformfield(
-                          controller: TextEditingController(),
-                          validator: (input) {
-                            if (input == null || input.isEmpty) {
-                              return "Enter a password";
-                            }
-                            if (!input.isValidPassword()) {
-                              return "Password length should be 8";
-                            }
-                            return null;
-                          },
-                          suffix: Icon(
-                            Icons.visibility,
-                            color: theme.colorScheme.primary,
+                          TextButton(
+                            onPressed: () {},
+                            child: const Text("Forgot password?"),
                           ),
-                          label: "Password",
+                        ],
+                      ),
+                      const Gap(20),
+                      SizedBox(
+                        height: 50,
+                        width: double.infinity,
+                        child: CustomButton(
+                          backgroundColor: theme.colorScheme.primary,
+                          foreground: theme.colorScheme.onPrimary,
+                          onPressed: () {
+                            _formKey.currentState!.validate();
+                          },
+                          btnText: "Login",
                         ),
-                        const Gap(10),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                Checkbox(value: true, onChanged: (value) {}),
-                                const LabelLargeText(
-                                  text: "Remember me",
-                                ),
-                              ],
+                      ),
+                      const Gap(20),
+                      const LabelLargeText(
+                        text: "Or",
+                      ),
+                      const Gap(20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Card(
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: Image.asset(
+                                IconAsset.appleIcon,
+                                width: 30,
+                              ),
                             ),
-                            TextButton(
-                              onPressed: () {},
-                              child: const Text("Forgot password?"),
+                          ),
+                          Card(
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: Image.asset(
+                                IconAsset.googleIcon,
+                                width: 30,
+                              ),
                             ),
-                          ],
-                        ),
-                        const Gap(20),
-                        SizedBox(
-                          height: 50,
-                          width: double.infinity,
-                          child: CustomButton(
-                            backgroundColor: theme.colorScheme.primary,
-                            foreground: theme.colorScheme.onPrimary,
+                          ),
+                        ],
+                      ),
+                      const Gap(20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const BodyLargeText(
+                            text: "Don't have an account?",
+                          ),
+                          TextButton(
                             onPressed: () {
-                              _formKey.currentState!.validate();
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const RegisterView(),
+                                ),
+                              );
                             },
-                            btnText: "Login",
-                          ),
-                        ),
-                        const Gap(20),
-                        const LabelLargeText(
-                          text: "Or",
-                        ),
-                        const Gap(20),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Card(
-                              child: Container(
-                                padding: const EdgeInsets.all(8),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                child: Image.asset(
-                                  IconAsset.appleIcon,
-                                  width: 30,
-                                ),
-                              ),
-                            ),
-                            Card(
-                              child: Container(
-                                padding: const EdgeInsets.all(8),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                child: Image.asset(
-                                  IconAsset.googleIcon,
-                                  width: 30,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        const Gap(20),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const BodyLargeText(
-                              text: "Don't have an account?",
-                            ),
-                            TextButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const RegisterView(),
-                                  ),
-                                );
-                              },
-                              child: const Text("Register"),
-                            )
-                          ],
-                        )
-                      ],
-                    ),
+                            child: const Text("Register"),
+                          )
+                        ],
+                      )
+                    ],
                   ),
                 ),
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );
