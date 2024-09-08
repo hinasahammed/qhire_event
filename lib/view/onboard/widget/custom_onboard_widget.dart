@@ -28,6 +28,7 @@ class CustomOnboardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     var orientation = MediaQuery.of(context).orientation;
+    var size = MediaQuery.sizeOf(context);
     if (orientation == Orientation.portrait) {
       return Consumer<OnboardViewmodel>(
         builder: (context, value, child) => Column(
@@ -106,76 +107,80 @@ class CustomOnboardWidget extends StatelessWidget {
     } else {
       return Consumer<OnboardViewmodel>(
         builder: (context, value, child) => SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Image.asset(imageUrl),
-              const Gap(30),
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(25),
-                    topRight: Radius.circular(25),
+          child: SizedBox(
+            width: size.width,
+            height: size.height,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Image.asset(imageUrl),
+                const Gap(30),
+                Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(25),
+                      topRight: Radius.circular(25),
+                    ),
+                    border: Border.all(
+                      color: theme.colorScheme.primary,
+                    ),
                   ),
-                  border: Border.all(
-                    color: theme.colorScheme.primary,
-                  ),
-                ),
-                child: Column(
-                  children: [
-                    const Gap(10),
-                    AnimatedSmoothIndicator(
-                      activeIndex: value.currentPage,
-                      onDotClicked: (index) {
-                        pageController.animateToPage(
-                          index,
-                          duration: const Duration(milliseconds: 400),
-                          curve: Curves.easeIn,
-                        );
-                      },
-                      count: 3,
-                      duration: const Duration(milliseconds: 800),
-                      effect: ExpandingDotsEffect(
-                        dotHeight: 10,
-                        activeDotColor: theme.colorScheme.primary,
-                      ),
-                    ),
-                    const Gap(30),
-                    TitleLargeText(
-                      text: warmingText,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    BodyLargeText(
-                      text: desc,
-                      textAlign: TextAlign.center,
-                    ),
-                    const Gap(30),
-                    SizedBox(
-                      height: 50,
-                      width: double.infinity,
-                      child: CustomButton(
-                        backgroundColor: theme.colorScheme.primary,
-                        foreground: theme.colorScheme.onPrimary,
-                        onPressed: onPressed,
-                        btnText: btnText,
-                      ),
-                    ),
-                    if (btnText != "Get started!")
-                      TextButton(
-                        onPressed: () {
-                          pageController.jumpToPage(2);
+                  child: Column(
+                    children: [
+                      const Gap(10),
+                      AnimatedSmoothIndicator(
+                        activeIndex: value.currentPage,
+                        onDotClicked: (index) {
+                          pageController.animateToPage(
+                            index,
+                            duration: const Duration(milliseconds: 400),
+                            curve: Curves.easeIn,
+                          );
                         },
-                        child: const LabelLargeText(
-                          text: "Skip",
+                        count: 3,
+                        duration: const Duration(milliseconds: 800),
+                        effect: ExpandingDotsEffect(
+                          dotHeight: 10,
+                          activeDotColor: theme.colorScheme.primary,
                         ),
                       ),
-                    const Gap(20),
-                  ],
-                ),
-              )
-            ],
+                      const Gap(30),
+                      TitleLargeText(
+                        text: warmingText,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      BodyLargeText(
+                        text: desc,
+                        textAlign: TextAlign.center,
+                      ),
+                      const Gap(30),
+                      SizedBox(
+                        height: 50,
+                        width: double.infinity,
+                        child: CustomButton(
+                          backgroundColor: theme.colorScheme.primary,
+                          foreground: theme.colorScheme.onPrimary,
+                          onPressed: onPressed,
+                          btnText: btnText,
+                        ),
+                      ),
+                      if (btnText != "Get started!")
+                        TextButton(
+                          onPressed: () {
+                            pageController.jumpToPage(2);
+                          },
+                          child: const LabelLargeText(
+                            text: "Skip",
+                          ),
+                        ),
+                      const Gap(20),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       );
