@@ -40,7 +40,7 @@ class SavedJobs extends StatelessWidget {
                 itemBuilder: (context, index) {
                   final data = savedJobList[index];
                   return JobCard(
-                    imageUrl: data.imageUrl,
+                    imageUrl: data.companyLogo,
                     companyName: data.companyName,
                     jobName: data.jobName,
                   );

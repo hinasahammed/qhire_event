@@ -8,6 +8,7 @@ import 'package:qhire_event/res/components/common/customText/title_large_text.da
 import 'package:qhire_event/res/components/common/custom_button.dart';
 import 'package:qhire_event/res/components/common/custom_textformfield.dart';
 import 'package:qhire_event/res/utils/validation/text_form_field_validation.dart';
+import 'package:qhire_event/view/forgetPassword/forget_password_view.dart';
 import 'package:qhire_event/view/register/register_view.dart';
 
 class LoginView extends StatefulWidget {
@@ -114,7 +115,14 @@ class _LoginViewState extends State<LoginView> {
                             ],
                           ),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const ForgetPasswordView(),
+                                  ));
+                            },
                             child: const Text("Forgot password?"),
                           ),
                         ],

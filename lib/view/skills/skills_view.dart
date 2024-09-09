@@ -54,7 +54,7 @@ class SkillsView extends StatelessWidget {
                   children: [
                     Icon(
                       Icons.close,
-                      color: theme.colorScheme.surface,
+                      color: theme.colorScheme.onSurface,
                     ),
                     const Gap(10),
                     const LabelLargeText(

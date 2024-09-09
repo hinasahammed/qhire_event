@@ -3,18 +3,27 @@ import 'package:qhire_event/model/job_model.dart';
 
 List<JobModel> savedJobList = [
   JobModel(
-    imageUrl: IconAsset.microsoftIcon,
+    companyLogo: IconAsset.microsoftIcon,
     companyName: "Microsoft",
     jobName: "Product Designer",
+    companyAddress: '',
+    jobType: '',
+    jobExperience: '',
   ),
   JobModel(
-    imageUrl: IconAsset.twitterIcon,
+    companyLogo: IconAsset.twitterIcon,
     companyName: "Twitter",
     jobName: "Product Designer",
+    companyAddress: '',
+    jobType: '',
+    jobExperience: '',
   ),
   JobModel(
-    imageUrl: IconAsset.facebookIcon,
+    companyLogo: IconAsset.facebookIcon,
     companyName: "Facebook",
     jobName: "Product Designer",
+    companyAddress: '',
+    jobType: '',
+    jobExperience: '',
   ),
 ];

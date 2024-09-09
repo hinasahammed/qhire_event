@@ -25,7 +25,7 @@ class FindYourJobsWidget extends StatelessWidget {
           itemBuilder: (context, index) {
             final data = allJobList[index];
             return JobCard(
-              imageUrl: data.imageUrl,
+              imageUrl: data.companyLogo,
               companyName: data.companyName,
               jobName: data.jobName,
             );

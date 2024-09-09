@@ -72,7 +72,7 @@ class RegisterViewmodel extends ChangeNotifier {
 
     if (result != null) {
       PlatformFile file = result.files.first;
-      
+
       _resumeName = file.name;
       _resumPath = file.path!;
       notifyListeners();
