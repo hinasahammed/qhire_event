@@ -31,9 +31,10 @@ class OnboardFinalWidget extends StatelessWidget {
                   topLeft: Radius.circular(200),
                   topRight: Radius.circular(200),
                 ),
-                border: Border.all(
+                border: Border(
+                    top: BorderSide(
                   color: theme.colorScheme.primary,
-                ),
+                )),
               ),
               child: Column(
                 children: [
@@ -88,9 +89,10 @@ class OnboardFinalWidget extends StatelessWidget {
                       topLeft: Radius.circular(200),
                       topRight: Radius.circular(200),
                     ),
-                    border: Border.all(
+                    border: Border(
+                        top: BorderSide(
                       color: theme.colorScheme.primary,
-                    ),
+                    )),
                   ),
                   child: Column(
                     children: [

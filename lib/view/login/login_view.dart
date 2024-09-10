@@ -25,7 +25,6 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final size = MediaQuery.sizeOf(context);
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -47,9 +46,10 @@ class _LoginViewState extends State<LoginView> {
                 padding: const EdgeInsets.all(16),
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  border: Border.all(
+                  border: Border(
+                      top: BorderSide(
                     color: theme.colorScheme.onSurface.withOpacity(.50),
-                  ),
+                  )),
                   borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(35),
                     topRight: Radius.circular(35),
@@ -118,11 +118,12 @@ class _LoginViewState extends State<LoginView> {
                           TextButton(
                             onPressed: () {
                               Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) =>
-                                        const ForgetPasswordView(),
-                                  ));
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const ForgetPasswordView(),
+                                ),
+                              );
                             },
                             child: const Text("Forgot password?"),
                           ),
@@ -194,11 +195,11 @@ class _LoginViewState extends State<LoginView> {
                             child: const Text("Register"),
                           )
                         ],
-                      )
+                      ),
                     ],
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

@@ -38,16 +38,16 @@ class CustomOnboardWidget extends StatelessWidget {
             const Spacer(),
             Container(
               width: double.infinity,
-              // height: size.height * .35,
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(25),
                   topRight: Radius.circular(25),
                 ),
-                border: Border.all(
+                border: Border(
+                    top: BorderSide(
                   color: theme.colorScheme.primary,
-                ),
+                )),
               ),
               child: Column(
                 children: [
@@ -119,9 +119,10 @@ class CustomOnboardWidget extends StatelessWidget {
                     topLeft: Radius.circular(25),
                     topRight: Radius.circular(25),
                   ),
-                  border: Border.all(
+                  border: Border(
+                      top: BorderSide(
                     color: theme.colorScheme.primary,
-                  ),
+                  )),
                 ),
                 child: Column(
                   children: [
