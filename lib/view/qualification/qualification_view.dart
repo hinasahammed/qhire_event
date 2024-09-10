@@ -42,16 +42,16 @@ class QualificationView extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           BodyLargeText(
-                            text: data.courseName,
+                            text: data.education,
                             fontWeight: FontWeight.bold,
                           ),
                           const Gap(5),
                           LabelLargeText(
-                            text: data.institutionName,
+                            text: data.universityCollege,
                           ),
                           const Gap(5),
                           LabelLargeText(
-                            text: data.year,
+                            text: data.enrolledYear,
                           ),
                         ],
                       ),

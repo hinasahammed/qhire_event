@@ -3,9 +3,14 @@ import 'package:gap/gap.dart';
 import 'package:qhire_event/res/components/common/custom_button.dart';
 import 'package:qhire_event/res/components/common/custom_textformfield.dart';
 
-class AddQualification extends StatelessWidget {
+class AddQualification extends StatefulWidget {
   const AddQualification({super.key});
 
+  @override
+  State<AddQualification> createState() => _AddQualificationState();
+}
+
+class _AddQualificationState extends State<AddQualification> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
