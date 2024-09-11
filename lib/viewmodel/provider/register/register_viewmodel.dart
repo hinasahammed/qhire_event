@@ -62,8 +62,7 @@ class RegisterViewmodel extends ChangeNotifier {
         notifyListeners();
       }
     } else {
-      // The user canceled the picker
-      print('No file selected');
+      debugPrint('No file selected');
     }
   }
 
@@ -77,8 +76,7 @@ class RegisterViewmodel extends ChangeNotifier {
       _resumPath = file.path!;
       notifyListeners();
     } else {
-      // The user canceled the picker
-      print('No file selected');
+      debugPrint('No file selected');
     }
   }
 }

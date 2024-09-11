@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:provider/provider.dart';
+import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
 import 'package:qhire_event/res/components/common/customText/label_large_text.dart';
 import 'package:qhire_event/res/components/common/customText/title_large_text.dart';
 import 'package:qhire_event/res/components/common/custom_button.dart';
@@ -12,6 +13,7 @@ import 'package:qhire_event/res/components/register/experience_list.dart';
 import 'package:qhire_event/res/components/register/gender_list.dart';
 import 'package:qhire_event/res/components/register/qualification_list.dart';
 import 'package:qhire_event/res/utils/validation/text_form_field_validation.dart';
+import 'package:qhire_event/view/login/login_view.dart';
 import 'package:qhire_event/view/register/widget/upload_widget.dart';
 import 'package:qhire_event/view/tabbar/custom_tab_bar.dart';
 import 'package:qhire_event/viewmodel/provider/register/register_viewmodel.dart';
@@ -212,7 +214,26 @@ class _RegisterViewState extends State<RegisterView> {
                             btnText: "Register",
                           ),
                         ),
-                        const Gap(10),
+                        const Gap(20),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const BodyLargeText(
+                              text: "Already have an account?",
+                            ),
+                            TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const LoginView(),
+                                  ),
+                                );
+                              },
+                              child: const Text("Login"),
+                            )
+                          ],
+                        ),
                       ],
                     ),
                   ),
