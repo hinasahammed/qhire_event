@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:qhire_event/assets/icons/icon_asset.dart';
-import 'package:qhire_event/assets/images/image_asset.dart';
+import 'package:qhire_event/gen/assets.gen.dart';
+
 import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
 import 'package:qhire_event/res/components/common/customText/label_large_text.dart';
 import 'package:qhire_event/res/components/common/customText/title_large_text.dart';
@@ -34,13 +34,13 @@ class _LoginViewState extends State<LoginView> {
                 width: double.infinity,
                 height: 300,
                 alignment: Alignment.center,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage(ImageAsset.background),
+                    image: Assets.images.background.provider(),
                     fit: BoxFit.fitWidth,
                   ),
                 ),
-                child: Image.asset(ImageAsset.logo),
+                child: Assets.images.logo.image(),
               ),
               Container(
                 padding: const EdgeInsets.all(16),
@@ -156,8 +156,7 @@ class _LoginViewState extends State<LoginView> {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              child: Image.asset(
-                                IconAsset.appleIcon,
+                              child: Assets.icons.appleIcon.image(
                                 width: 30,
                               ),
                             ),
@@ -168,8 +167,7 @@ class _LoginViewState extends State<LoginView> {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
                               ),
-                              child: Image.asset(
-                                IconAsset.googleIcon,
+                              child: Assets.icons.googleIcon.image(
                                 width: 30,
                               ),
                             ),

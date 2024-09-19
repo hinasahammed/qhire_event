@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:qhire_event/assets/images/image_asset.dart';
+import 'package:qhire_event/gen/assets.gen.dart';
+
 import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
 import 'package:qhire_event/res/components/common/customText/title_large_text.dart';
 import 'package:qhire_event/res/components/common/custom_button.dart';
@@ -20,7 +21,7 @@ class OnboardFinalWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             const Spacer(),
-            Image.asset(ImageAsset.onboardFour),
+            Assets.images.onboardFour.image(),
             const Spacer(),
             Container(
               width: double.infinity,
@@ -80,7 +81,7 @@ class OnboardFinalWidget extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Image.asset(ImageAsset.onboardFour),
+                Assets.images.onboardFour.image(),
                 Container(
                   width: double.infinity,
                   padding: const EdgeInsets.all(12),

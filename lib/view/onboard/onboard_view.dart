@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:qhire_event/assets/images/image_asset.dart';
+import 'package:qhire_event/gen/assets.gen.dart';
+
 import 'package:qhire_event/view/onboard/widget/custom_onboard_widget.dart';
 import 'package:qhire_event/view/onboard/widget/onboard_final_widget.dart';
 import 'package:qhire_event/viewmodel/provider/onboard/onboard_viewmodel.dart';
@@ -19,7 +20,7 @@ class _OnboardViewState extends State<OnboardView> {
   Widget build(BuildContext context) {
     final onboardProvider =
         Provider.of<OnboardViewmodel>(context, listen: false);
-        
+
     return Scaffold(
       body: SafeArea(
         child: PageView(
@@ -36,7 +37,7 @@ class _OnboardViewState extends State<OnboardView> {
                   curve: Curves.easeIn,
                 );
               },
-              imageUrl: ImageAsset.onboardFirst,
+              imageUrl: Assets.images.onboardFirst.path,
               warmingText: "Hi!",
               desc: "Welcome to CareerHub! Look for your dream job, with us.",
               btnText: "Next",
@@ -49,7 +50,7 @@ class _OnboardViewState extends State<OnboardView> {
                   curve: Curves.easeIn,
                 );
               },
-              imageUrl: ImageAsset.onboardSecond,
+              imageUrl: Assets.images.onboardFirst.path,
               warmingText: "Together we can!",
               desc: "Find a suitable job without even leaving home.",
               btnText: "Next",
@@ -64,7 +65,7 @@ class _OnboardViewState extends State<OnboardView> {
                   ),
                 );
               },
-              imageUrl: ImageAsset.onboardThird,
+              imageUrl: Assets.images.onboardFirst.path,
               warmingText: "Easy to figure out!",
               desc:
                   "No need to delve into it for a long time, everything is clear and simple.",

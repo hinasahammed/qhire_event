@@ -1,9 +1,9 @@
-import 'package:qhire_event/assets/icons/icon_asset.dart';
+import 'package:qhire_event/gen/assets.gen.dart';
 import 'package:qhire_event/model/job_model.dart';
 
 List<JobModel> savedJobList = [
   JobModel(
-    companyLogo: IconAsset.microsoftIcon,
+    companyLogo: Assets.icons.microsoft.path,
     companyName: "Microsoft",
     jobName: "Product Designer",
     companyAddress: '',
@@ -11,7 +11,7 @@ List<JobModel> savedJobList = [
     jobExperience: '',
   ),
   JobModel(
-    companyLogo: IconAsset.twitterIcon,
+    companyLogo: Assets.icons.twitter.path,
     companyName: "Twitter",
     jobName: "Product Designer",
     companyAddress: '',
@@ -19,7 +19,7 @@ List<JobModel> savedJobList = [
     jobExperience: '',
   ),
   JobModel(
-    companyLogo: IconAsset.facebookIcon,
+    companyLogo: Assets.icons.facebook.path,
     companyName: "Facebook",
     jobName: "Product Designer",
     companyAddress: '',

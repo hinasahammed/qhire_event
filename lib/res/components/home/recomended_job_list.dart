@@ -1,9 +1,9 @@
-import 'package:qhire_event/assets/images/image_asset.dart';
+import 'package:qhire_event/gen/assets.gen.dart';
 import 'package:qhire_event/model/job_model.dart';
 
 List<JobModel> recomendedJobList = [
   JobModel(
-    companyLogo: ImageAsset.logo,
+    companyLogo: Assets.images.logo.path,
     companyAddress:
         "2nd Floor, Maniyattukudi Asfa Building,Mavoor Road Calicut, Kerala",
     jobType: "Fullt Time",
@@ -12,7 +12,7 @@ List<JobModel> recomendedJobList = [
     jobName: "UI/UX Designer",
   ),
   JobModel(
-    companyLogo: ImageAsset.logo,
+    companyLogo: Assets.images.logo.path,
     companyAddress:
         "2nd Floor, Maniyattukudi Asfa Building,Mavoor Road Calicut, Kerala",
     jobType: "Fullt Time",
@@ -21,7 +21,7 @@ List<JobModel> recomendedJobList = [
     jobName: "Flutter Developer",
   ),
   JobModel(
-    companyLogo: ImageAsset.logo,
+    companyLogo: Assets.images.logo.path,
     companyAddress:
         "2nd Floor, Maniyattukudi Asfa Building,Mavoor Road Calicut, Kerala",
     jobType: "Fullt Time",

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:qhire_event/assets/icons/icon_asset.dart';
+import 'package:qhire_event/gen/assets.gen.dart';
+
 import 'package:qhire_event/view/event/event_view.dart';
 import 'package:qhire_event/view/home/home_view.dart';
 import 'package:qhire_event/view/jobs/jobs_view.dart';
@@ -37,26 +38,26 @@ class CustomTabBar extends StatelessWidget {
               Tab(
                 text: "Home",
                 icon: value.currentPageIndex == 0
-                    ? Image.asset(IconAsset.homeColoured)
-                    : Image.asset(IconAsset.homeOutline),
+                    ? Assets.icons.homeColoured.image()
+                    : Assets.icons.homeOutline.image(),
               ),
               Tab(
                 text: "Event",
                 icon: value.currentPageIndex == 1
-                    ? Image.asset(IconAsset.eventColoured)
-                    : Image.asset(IconAsset.eventOutline),
+                    ? Assets.icons.eventColoured.image()
+                    : Assets.icons.eventOutline.image(),
               ),
               Tab(
                 text: "Jobs",
                 icon: value.currentPageIndex == 2
-                    ? Image.asset(IconAsset.jobsColoured)
-                    : Image.asset(IconAsset.jobsOutline),
+                    ? Assets.icons.jobColoured.image()
+                    : Assets.icons.jobOutline.image(),
               ),
               Tab(
                 text: "Profile",
                 icon: value.currentPageIndex == 3
-                    ? Image.asset(IconAsset.profileColoured)
-                    : Image.asset(IconAsset.profileOutline),
+                    ? Assets.icons.profileColoured.image()
+                    : Assets.icons.profileOutline.image(),
               ),
             ],
           ),

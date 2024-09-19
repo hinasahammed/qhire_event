@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:qhire_event/assets/icons/icon_asset.dart';
+import 'package:qhire_event/gen/assets.gen.dart';
+
 import 'package:qhire_event/res/components/common/customText/label_large_text.dart';
 
 class RecentItemsWidget extends StatefulWidget {
@@ -32,7 +33,7 @@ class _RecentItemsWidgetState extends State<RecentItemsWidget> {
         ),
         child: Row(
           children: [
-            Image.asset(IconAsset.recentIcon),
+            Assets.icons.recentIcon.image(),
             const Gap(5),
             LabelLargeText(
               text: recentList[index],

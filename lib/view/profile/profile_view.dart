@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:qhire_event/assets/icons/icon_asset.dart';
-import 'package:qhire_event/assets/images/image_asset.dart';
+import 'package:qhire_event/gen/assets.gen.dart';
+
 import 'package:qhire_event/res/components/common/customText/label_large_text.dart';
 import 'package:qhire_event/view/certification/certification_view.dart';
 import 'package:qhire_event/view/editProfile/edit_profile_view.dart';
@@ -24,9 +24,9 @@ class ProfileView extends StatelessWidget {
           children: [
             Container(
               width: size.width,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(ImageAsset.background),
+                  image: Assets.images.background.provider(),
                   alignment: Alignment.topCenter,
                   fit: BoxFit.fitWidth,
                 ),
@@ -96,7 +96,7 @@ class ProfileView extends StatelessWidget {
                               ),
                             );
                           },
-                          icon: IconAsset.profileIcon,
+                          icon: Assets.icons.profileIcon.path,
                           title: "Profile",
                         ),
                         ProfileCardItemWidget(
@@ -108,7 +108,7 @@ class ProfileView extends StatelessWidget {
                               ),
                             );
                           },
-                          icon: IconAsset.qualificationIcon,
+                          icon: Assets.icons.qualificationIcon.path,
                           title: "Qualification",
                         ),
                         ProfileCardItemWidget(
@@ -120,7 +120,7 @@ class ProfileView extends StatelessWidget {
                               ),
                             );
                           },
-                          icon: IconAsset.certificationIcon,
+                          icon: Assets.icons.certificationIcon.path,
                           title: "Certifications",
                         ),
                         ProfileCardItemWidget(
@@ -132,7 +132,7 @@ class ProfileView extends StatelessWidget {
                               ),
                             );
                           },
-                          icon: IconAsset.skillsIcon,
+                          icon: Assets.icons.skillsIcon.path,
                           title: "Skills",
                         ),
                         ProfileCardItemWidget(
@@ -144,15 +144,15 @@ class ProfileView extends StatelessWidget {
                               ),
                             );
                           },
-                          icon: IconAsset.resumeIcon,
+                          icon: Assets.icons.resumeIcon.path,
                           title: "Resume",
                         ),
-                        const ProfileCardItemWidget(
-                          icon: IconAsset.appliedJobIcon,
+                        ProfileCardItemWidget(
+                          icon: Assets.icons.appliedJobsIcon.path,
                           title: "View Applied Jobs",
                         ),
-                        const ProfileCardItemWidget(
-                          icon: IconAsset.settingsIcon,
+                        ProfileCardItemWidget(
+                          icon: Assets.icons.settingsIcon.path,
                           title: "Settings",
                         ),
                       ],

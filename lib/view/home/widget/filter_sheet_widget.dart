@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:provider/provider.dart';
-import 'package:qhire_event/assets/icons/icon_asset.dart';
+import 'package:qhire_event/gen/assets.gen.dart';
+
 import 'package:qhire_event/res/components/common/customText/body_large_text.dart';
 import 'package:qhire_event/res/components/common/customText/label_large_text.dart';
 import 'package:qhire_event/res/components/common/custom_button.dart';
@@ -31,7 +32,7 @@ class FilterSheetWidget extends StatelessWidget {
               onTap: () {
                 Navigator.pop(context);
               },
-              child: Image.asset(IconAsset.arrowDown),
+              child: Assets.icons.arrowDown.image(),
             ),
             const Gap(10),
             const BodyLargeText(
